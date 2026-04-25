@@ -1,0 +1,11 @@
+crewai
+langchain-openai
+google-genai
+openai
+PyMuPDF 
+Pillow   
+pymilvus
+pydantic
+Jinja2
+python-pptx
+python-dotenv
