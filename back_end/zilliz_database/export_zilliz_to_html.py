@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ================== Cấu hình ==================
-COL_NAME = "Global_Success_Book"  # Đảm bảo đúng tên collection của bạn
+COL_NAME = "Global_Success_Book_4"  # Đảm bảo đúng tên collection của bạn
 MILVUS_URI = os.getenv("ZILLIZ_URI", "http://localhost:19530")
 MILVUS_TOKEN = os.getenv("ZILLIZ_TOKEN", "")
 

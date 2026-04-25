@@ -1,6 +1,6 @@
 from crewai import Task
-from utils import prompts
-from tasks.slide_models import SlideDeck
+from back_end.utils import prompts
+from back_end.tasks.slide_models import SlideDeck
 import json
 
 

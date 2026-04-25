@@ -1,6 +1,6 @@
 from crewai import Task
-from utils import prompts
-from tasks.lesson_plan_models import LessonPlan
+from back_end.utils import prompts
+from back_end.tasks.lesson_plan_models import LessonPlan
 
 def create_analyze_task(agent, lesson_name, context_text):
     return Task(

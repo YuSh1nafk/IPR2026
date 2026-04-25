@@ -1,5 +1,6 @@
 # Bảo mật: Không bao giờ lưu API Key
 .env
+*/.junie
 
 # Python: Bỏ qua các file rác khi chạy code
 __pycache__/
@@ -16,3 +17,6 @@ venv/
 # Dữ liệu: Thường file PDF hoặc database local sẽ rất nặng
 *.pdf
 *.db
+
+.junie/
+**/back_end/.junie/
