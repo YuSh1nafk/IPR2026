@@ -13,13 +13,11 @@ load_dotenv()
 # ================== Cấu hình ==================
 DOCX_PATH = "D:\\codecacthu\\IPR\\Book\\Global_Success_Book_1.pdf"
 COL_NAME = "Global_Success_Book"
-EMBED_MODEL = "gemini-embedding-2-preview"  # Model toán học (để tạo vector)
+EMBED_MODEL = "gemini-embedding-2-preview"
 EMBED_DIM = 3072
 
 MILVUS_URI = os.getenv("ZILLIZ_URI", "http://localhost:19530")
 MILVUS_TOKEN = os.getenv("ZILLIZ_TOKEN", "")
-
-# Sử dụng model Vision mới mạnh nhất của Google để nhìn và sắp xếp bố cục
 LAYOUT_MODEL = "gemini-3.1-flash-lite-preview"
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
@@ -29,7 +27,6 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 def render_page_to_image(page) -> bytes:
     """Render toàn trang PDF thành ảnh để AI nhìn bố cục (trong RAM)."""
-    # Render với độ phân giải cao để AI nhìn rõ
     mat = Matrix(2, 2)
     pix = page.get_pixmap(matrix=mat, alpha=False)
     img_bytes = pix.tobytes("jpeg")
@@ -83,7 +80,6 @@ def analyze_page_layout(page_image_bytes: bytes) -> List[Dict]:
         "Lưu ý: Trả về ĐÚNG định dạng JSON mảng, không thêm chú thích hay ký tự markdown dư thừa nào khác."
     )
 
-    # Gửi ảnh to lên model Gemini Vision
     image_part = types.Part.from_bytes(data=page_image_bytes, mime_type="image/jpeg")
     response = client.models.generate_content(
         model=LAYOUT_MODEL,
@@ -92,7 +88,6 @@ def analyze_page_layout(page_image_bytes: bytes) -> List[Dict]:
     )
 
     try:
-        # Parse chuỗi JSON
         structured_layout = json.loads(response.text)
         return structured_layout
     except json.JSONDecodeError as e:
@@ -110,16 +105,13 @@ def python_crop_image(full_image_bytes: bytes, bbox: List[int]) -> bytes:
     if not isinstance(bbox, list):
         return None
 
-    # 1. Gỡ lớp mảng thừa nếu AI lỡ bọc thêm (vd: [[ymin, xmin, ymax, xmax]])
     if len(bbox) == 1 and isinstance(bbox[0], list):
         bbox = bbox[0]
 
-    # 2. Kiểm tra độ dài có đúng 4 điểm tọa độ không
     if len(bbox) != 4:
         print(f"   -> [Cảnh báo] AI trả về tọa độ bbox sai độ dài: {bbox}. Bỏ qua.")
         return None
 
-    # 3. Ép kiểu toàn bộ về số thực (float) để tránh lỗi mảng/chữ bị lọt vào
     try:
         ymin, xmin, ymax, xmax = [float(x) for x in bbox]
     except (ValueError, TypeError):
@@ -127,17 +119,14 @@ def python_crop_image(full_image_bytes: bytes, bbox: List[int]) -> bytes:
         return None
     # -----------------------------------
 
-    # 1. Mở tấm ảnh to từ bytes
     full_img = Image.open(BytesIO(full_image_bytes))
     full_w, full_h = full_img.size
 
-    # 2. Giải nén tọa độ: nhân tọa độ dải 1000 với kích thước thực
     left = int(xmin * full_w / 1000)
     top = int(ymin * full_h / 1000)
     right = int(xmax * full_w / 1000)
     bottom = int(ymax * full_h / 1000)
 
-    # Chặn tọa độ vượt quá giới hạn ảnh
     left, top = max(0, left), max(0, top)
     right, bottom = min(full_w, right), min(full_h, bottom)
 
@@ -145,16 +134,13 @@ def python_crop_image(full_image_bytes: bytes, bbox: List[int]) -> bytes:
         print("   -> [Cảnh báo] Tọa độ ảnh sau khi tính toán bị lỗi (chiều rộng/cao <= 0). Bỏ qua.")
         return None
 
-    # 3. Cắt (Crop) tấm ảnh nhỏ
     small_img = full_img.crop((left, top, right, bottom))
 
-    # 4. Trả về bytes của tấm ảnh nhỏ
     buffer = BytesIO()
     small_img.convert('RGB').save(buffer, format="JPEG", quality=90)
     return buffer.getvalue()
 
 
-# ================== Tương tác AI & Database ==================
 def gemini_embed_text(texts: List[str]) -> List[List[float]]:
     out = []
     # Rút gọn batch xuống 20 để tránh lỗi Quota
@@ -182,7 +168,7 @@ def setup_milvus() -> Collection:
     connections.connect(alias="default", uri=MILVUS_URI, token=MILVUS_TOKEN)
 
     if utility.has_collection(COL_NAME):
-        utility.drop_collection(COL_NAME)  # Luôn xóa collection cũ để test cho sạch
+        utility.drop_collection(COL_NAME)  # Luôn xóa collection cũ
         print(f"Đã xóa collection cũ '{COL_NAME}'.")
 
     fields = [
@@ -210,7 +196,7 @@ def main():
     print("2. Khởi tạo Milvus...")
     col = setup_milvus()
 
-    seq_id = 0  # Đánh số thứ tự toàn project
+    seq_id = 0
 
     with Document(DOCX_PATH) as doc:
         for page_num, page in enumerate(doc):
@@ -255,7 +241,7 @@ def main():
 
                                 # Nghỉ 15 giây sau mỗi lần nhúng để tránh lỗi API Limit 429
                                 print(f"   (Đã nhúng xong 1 ảnh nhỏ seq {seq_id}, nghỉ 15s để né API limit...)")
-                                time.sleep(1)
+                                time.sleep(15)
                             except Exception as e:
                                 print(f"Bỏ qua 1 ảnh ở seq {seq_id} do lỗi API Quota: {e}")
 
@@ -270,7 +256,7 @@ def main():
             print(f"--- Hoàn tất chèn dữ liệu TRANG {page_num + 1} ---")
 
             # Nên nghỉ khoảng 30s sau khi nhúng xong 1 trang để tài khoản Free Tier (5 requests/phút) không bị khoá
-            time.sleep(10)
+            time.sleep(30)
 
     print("\nHOÀN TẤT DỰ ÁN INGEST! Dữ liệu của bạn giờ đã có cả TEXT và ẢNH nhỏ chuẩn xác.")
 

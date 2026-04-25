@@ -17,7 +17,6 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 IMAGE_CACHE = {}
 
-# Danh sách các "Đề mục to" tiêu chuẩn trong sách Global Success
 BIG_HEADINGS = [
     "GETTING STARTED",
     "A CLOSER LOOK 1",
@@ -35,10 +34,8 @@ def split_context_by_headings(raw_context: str):
     Hàm này chia một đoạn text dài thòong thành các phần tử từ khóa.
     Ví dụ: Nó sẽ tách text từ "GETTING STARTED" cho đến khi gặp "A CLOSER LOOK 1".
     """
-    # Tạo Regex pattern
     pattern = r"(?i)\b(" + "|".join(BIG_HEADINGS) + r")\b"
 
-    # Tìm tất cả các vị trí xuất hiện của Đề mục to
     matches = list(re.finditer(pattern, raw_context))
 
     sections = []
@@ -46,7 +43,6 @@ def split_context_by_headings(raw_context: str):
         heading_name = matches[i].group(1).upper()
         start_idx = matches[i].end()
 
-        # Nếu là đề mục cuối cùng thì lấy đến hết chuỗi, nếu không thì lấy đến đề mục tiếp theo
         end_idx = matches[i + 1].start() if i + 1 < len(matches) else len(raw_context)
 
         content = raw_context[start_idx:end_idx].strip()
@@ -171,9 +167,6 @@ def main():
         save_to_json(IMAGE_CACHE, "outputs/image_cache.json")
 
 
-
-    # MỚI: Sau khi vòng lặp for kết thúc (tức là đã chạy xong cả Unit)
-    # Ta mới gọi hàm render ra 1 file HTML duy nhất
     print("\n⏳ Đang tiến hành gộp và render file HTML tổng...")
     render_full_unit_to_html(
         all_plans_dict_list=all_lesson_plans,

@@ -9,3 +9,6 @@ pydantic
 Jinja2
 python-pptx
 python-dotenv
+fastapi
+uvicorn
+python-multipart

@@ -1,4 +1,3 @@
-# main_slide.py
 import os
 from dotenv import load_dotenv
 from crewai import Crew, Process
