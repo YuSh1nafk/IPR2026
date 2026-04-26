@@ -14,7 +14,7 @@ def main():
     print("▶️ BẮT ĐẦU LUỒNG 2: TẠO SLIDE POWERPOINT")
 
     lesson_data = load_from_json("outputs/lesson_plan.json")
-    image_cache = load_from_json("outputs/image_cache.json")  # MỚI
+    image_cache = load_from_json("outputs/image_cache.json")
 
     slide_agent = create_slide_designer_agent()
     all_slide_decks = []
