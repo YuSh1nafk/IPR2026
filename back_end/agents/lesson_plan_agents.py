@@ -1,6 +1,6 @@
 import os
 from crewai import Agent, LLM
-from back_end.utils import prompts
+from utils import prompts
 
 llm_mini = LLM(
     model="gpt-4o-mini",

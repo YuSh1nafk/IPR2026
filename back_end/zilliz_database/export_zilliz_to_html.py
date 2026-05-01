@@ -1,23 +1,29 @@
 import os
 from pymilvus import connections, Collection
 from dotenv import load_dotenv
+from pymilvus.orm import utility
 
 load_dotenv()
 
 # ================== Cấu hình ==================
-COL_NAME = "Global_Success_Book_4"  # Đảm bảo đúng tên collection
+# COL_NAME = "Global_Success_Book_4"  # Đảm bảo đúng tên collection
 MILVUS_URI = os.getenv("ZILLIZ_URI", "http://localhost:19530")
 MILVUS_TOKEN = os.getenv("ZILLIZ_TOKEN", "")
 
 
-def export_milvus_to_html(output_filename="database_dump_test.html"):
+def export_milvus_to_html(col_name:str ,output_filename="database_dump_test_1.html"):
     print("1. Đang kết nối tới Zilliz...")
     connections.connect(alias="default", uri=MILVUS_URI, token=MILVUS_TOKEN)
 
-    col = Collection(COL_NAME)
+    if not utility.has_collection(col_name):
+        print(f"Lỗi: Collection '{col_name}' không tồn tại trên Zilliz.")
+        connections.disconnect("default")
+        return None
+
+    col = Collection(col_name)
     col.load()
 
-    print(f"2. Đang truy vấn toàn bộ dữ liệu từ collection '{COL_NAME}'...")
+    print(f"2. Đang truy vấn toàn bộ dữ liệu từ collection '{col_name}'...")
     # Lấy tối đa 10.000 dòng (nếu sách dài hơn, bạn có thể tăng limit)
     # Dùng expr="seq_id >= 0" để lấy tất cả các record có seq_id
     results = col.query(
@@ -31,7 +37,6 @@ def export_milvus_to_html(output_filename="database_dump_test.html"):
         return
 
     print(f"3. Tìm thấy {len(results)} bản ghi. Đang sắp xếp theo thứ tự (seq_id)...")
-    # Sắp xếp lại danh sách từ trên xuống dưới theo đúng số thứ tự
     sorted_results = sorted(results, key=lambda x: x["seq_id"])
 
     print("4. Đang tạo file HTML...")
@@ -80,12 +85,14 @@ def export_milvus_to_html(output_filename="database_dump_test.html"):
     </html>
     """
 
-    # Ghi ra file
+    os.makedirs(os.path.dirname(output_filename), exist_ok=True)
     with open(output_filename, "w", encoding="utf-8") as f:
         f.write(html_content)
 
-    print(f"HOÀN TẤT! Hãy mở file '{output_filename}' bằng trình duyệt (Chrome/Edge) để xem kết quả.")
+    connections.disconnect("default")
+    print(f"HOÀN TẤT! Đã trả về dữ liệu HTML.")
+    return html_content
 
 
 if __name__ == "__main__":
-    export_milvus_to_html()
+    export_milvus_to_html("Global_Success_Book_4")

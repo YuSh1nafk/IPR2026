@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test API EdTech AI</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f7f6; max-width: 800px; margin: auto; }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h2 { margin-top: 0; color: #333; font-size: 18px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        input[type="text"], input[type="file"] { width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #0056b3; }
+        button.btn-get { background: #28a745; }
+        button.btn-get:hover { background: #218838; }
+        #response-log { background: #333; color: #0f0; padding: 15px; border-radius: 4px; font-family: monospace; white-space: pre-wrap; min-height: 100px; max-height: 300px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 Giao diện Test API EdTech AI Master</h1>
+
+    <div class="card">
+        <h2>💻 Terminal / Kết quả trả về</h2>
+        <div id="response-log">Chưa có dữ liệu...</div>
+    </div>
+
+    <div class="card">
+        <h2>1. Upload PDF & Đẩy lên Zilliz (/api/upload-and-ingest)</h2>
+        <input type="file" id="uploadFile" accept=".pdf">
+        <input type="text" id="colNameUpload" placeholder="Nhập tên Collection (VD: Global_Success_Book_1)">
+        <button onclick="uploadAndIngest()">📤 Upload & Ingest</button>
+    </div>
+
+    <div class="card">
+        <h2>2. Xem dữ liệu Zilliz Database (/api/database-preview)</h2>
+        <input type="text" id="colNamePreview" placeholder="Nhập tên Collection muốn xem (VD: Global_Success_Book_1)">
+        <button class="btn-get" onclick="previewDatabase()">👁️ Mở tab xem Database</button>
+    </div>
+
+    <div class="card">
+        <h2>3. Soạn Giáo Án CrewAI (/api/generate-lesson-plan)</h2>
+        <input type="text" id="colNamePlan" placeholder="Nhập tên Collection đã upload (VD: Global_Success_Book_1)">
+        <input type="text" id="unitTitle" placeholder="Tên Unit (VD: UNIT 1: LEISURE TIME)" value="FULL LESSON PLAN">
+        <button onclick="generateLessonPlan()">📝 Bắt đầu soạn giáo án</button>
+    </div>
+
+    <div class="card">
+        <h2>4. Tạo Slide PowerPoint (/api/generate-slides)</h2>
+        <input type="text" id="colNameSlide" placeholder="Nhập tên Collection đã soạn giáo án (VD: Global_Success_Book_1)">
+        <button onclick="generateSlides()">📊 Tạo file PPTX</button>
+    </div>
+
+    <script>
+        const BASE_URL = "http://localhost:8000";
+
+        // Hàm ghi log ra màn hình
+        function logResponse(data) {
+            const logDiv = document.getElementById("response-log");
+            logDiv.textContent = typeof data === 'object' ? JSON.stringify(data, null, 2) : data;
+        }
+
+        // 1. API Upload & Ingest
+        async function uploadAndIngest() {
+            const fileInput = document.getElementById("uploadFile").files[0];
+            const colName = document.getElementById("colNameUpload").value;
+
+            if (!fileInput || !colName) {
+                alert("Vui lòng chọn file PDF và nhập tên Collection!");
+                return;
+            }
+
+            logResponse("Đang gửi file lên server...");
+            const formData = new FormData();
+            formData.append("file", fileInput);
+            formData.append("col_name", colName);
+
+            try {
+                const response = await fetch(`${BASE_URL}/api/upload-and-ingest`, {
+                    method: "POST",
+                    body: formData
+                });
+                const result = await response.json();
+                logResponse(result);
+            } catch (error) {
+                logResponse("Lỗi kết nối: " + error);
+            }
+        }
+
+        // 2. API Database Preview
+        function previewDatabase() {
+            const colName = document.getElementById("colNamePreview").value;
+            if (!colName) {
+                alert("Vui lòng nhập tên Collection!");
+                return;
+            }
+            // Mở thẳng sang tab mới vì API này trả về giao diện HTML
+            const url = `${BASE_URL}/api/database-preview?col_name=${colName}`;
+            window.open(url, '_blank');
+        }
+
+        // 3. API Generate Lesson Plan
+        async function generateLessonPlan() {
+            const colName = document.getElementById("colNamePlan").value;
+            const unitTitle = document.getElementById("unitTitle").value;
+
+            if (!colName) {
+                alert("Vui lòng nhập tên Collection!");
+                return;
+            }
+
+            logResponse("Đang ra lệnh cho CrewAI soạn giáo án ngầm...");
+            const formData = new FormData();
+            formData.append("col_name", colName);
+            formData.append("unit_title", unitTitle);
+
+            try {
+                const response = await fetch(`${BASE_URL}/api/generate-lesson-plan`, {
+                    method: "POST",
+                    body: formData
+                });
+                const result = await response.json();
+                logResponse(result);
+            } catch (error) {
+                logResponse("Lỗi kết nối: " + error);
+            }
+        }
+
+        // 4. API Generate Slides
+        async function generateSlides() {
+            const colName = document.getElementById("colNameSlide").value;
+
+            if (!colName) {
+                alert("Vui lòng nhập tên Collection!");
+                return;
+            }
+
+            logResponse("Đang ra lệnh thiết kế Slide ngầm...");
+            const formData = new FormData();
+            formData.append("col_name", colName);
+
+            try {
+                const response = await fetch(`${BASE_URL}/api/generate-slides`, {
+                    method: "POST",
+                    body: formData
+                });
+                const result = await response.json();
+                logResponse(result);
+            } catch (error) {
+                logResponse("Lỗi kết nối: " + error);
+            }
+        }
+    </script>
+</body>
+</html>

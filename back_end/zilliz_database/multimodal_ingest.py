@@ -164,41 +164,58 @@ def gemini_embed_image(image_bytes: bytes) -> List[float]:
     return response.embeddings[0].values
 
 
-def setup_milvus() -> Collection:
+def setup_milvus(col_name: str) -> Collection:
+    # connections.connect(alias="default", uri=MILVUS_URI, token=MILVUS_TOKEN)
+    #
+    # if utility.has_collection(COL_NAME):
+    #     utility.drop_collection(COL_NAME)
+    #     print(f"Đã xóa collection cũ '{COL_NAME}'.")
+    #
+    # fields = [
+    #     FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
+    #     FieldSchema(name="seq_id", dtype=DataType.INT64),  # Thứ tự từ trên xuống dưới
+    #     FieldSchema(name="data_type", dtype=DataType.VARCHAR, max_length=10),  # "text" hoặc "image"
+    #     FieldSchema(name="content", dtype=DataType.VARCHAR, max_length=65535),  # Chữ hoặc Base64 ảnh
+    #     FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=EMBED_DIM),
+    # ]
+    # col = Collection(name=COL_NAME, schema=CollectionSchema(fields))
+    # col.create_index(field_name="vector",
+    #                  index_params={"index_type": "IVF_FLAT", "metric_type": "COSINE", "params": {"nlist": 128}})
+    # return col
+
     connections.connect(alias="default", uri=MILVUS_URI, token=MILVUS_TOKEN)
 
-    if utility.has_collection(COL_NAME):
-        utility.drop_collection(COL_NAME)  # Luôn xóa collection cũ
-        print(f"Đã xóa collection cũ '{COL_NAME}'.")
+    if utility.has_collection(col_name):
+        utility.drop_collection(col_name)
+        print(f"Đã xóa collection cũ '{col_name}'.")
 
     fields = [
-        FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
-        FieldSchema(name="seq_id", dtype=DataType.INT64),  # Thứ tự từ trên xuống dưới
-        FieldSchema(name="data_type", dtype=DataType.VARCHAR, max_length=10),  # "text" hoặc "image"
-        FieldSchema(name="content", dtype=DataType.VARCHAR, max_length=65535),  # Chữ hoặc Base64 ảnh
+         FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
+         FieldSchema(name="seq_id", dtype=DataType.INT64),  # Thứ tự từ trên xuống dưới
+         FieldSchema(name="data_type", dtype=DataType.VARCHAR, max_length=10),  # "text" hoặc "image"
+         FieldSchema(name="content", dtype=DataType.VARCHAR, max_length=65535),  # Chữ hoặc Base64 ảnh
         FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=EMBED_DIM),
-    ]
-    col = Collection(name=COL_NAME, schema=CollectionSchema(fields))
+     ]
+    col = Collection(name=col_name, schema=CollectionSchema(fields))
     col.create_index(field_name="vector",
-                     index_params={"index_type": "IVF_FLAT", "metric_type": "COSINE", "params": {"nlist": 128}})
+                      index_params={"index_type": "IVF_FLAT", "metric_type": "COSINE", "params": {"nlist": 128}})
     return col
 
-
 # ================== Luồng chạy chính ==================
-def main():
+def main(pdf_path: str, col_name: str):
     import time
 
     print("1. Đọc PDF và trích xuất dữ liệu...")
-    if not os.path.exists(DOCX_PATH):
+    if not os.path.exists(pdf_path):
         print("Lỗi: Không tìm thấy file PDF.")
         return
 
     print("2. Khởi tạo Milvus...")
-    col = setup_milvus()
+    col = setup_milvus(col_name=col_name)
 
     seq_id = 0
 
-    with Document(DOCX_PATH) as doc:
+    with Document(pdf_path) as doc:
         for page_num, page in enumerate(doc):
             print(f"\n--- Bắt đầu TRANG {page_num + 1} ---")
 
@@ -262,5 +279,4 @@ def main():
 
 
 if __name__ == "__main__":
-    # Đừng quên Drop collection cũ trên web Zilliz trước khi chạy nhé!
     main()
