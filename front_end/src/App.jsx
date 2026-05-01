@@ -1,152 +1,164 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 function App() {
-  // State quản lý dữ liệu nhập vào
+  // State quản lý log và dữ liệu nhập
+  const [responseLog, setResponseLog] = useState("Chưa có dữ liệu...");
+  const [colName, setColName] = useState("");
+  const [unitTitle, setUnitTitle] = useState("FULL LESSON PLAN");
   const [file, setFile] = useState(null);
-  const [collectionName, setCollectionName] = useState('');
-  const [unitTitle, setUnitTitle] = useState('FULL LESSON PLAN');
-  
-  // State quản lý trạng thái giao diện
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
 
-  // 1. API: Upload & Ingest (Cần file và col_name)
-  const handleUploadAndIngest = async () => {
-    if (!file || !collectionName) {
-      return alert("Vui lòng chọn file PDF và nhập tên Collection!");
-    }
-
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('col_name', collectionName);
-
-    setLoading(true);
-    setMessage('Đang gửi yêu cầu...');
-    try {
-      const res = await axios.post(`${API_BASE_URL}/api/upload-and-ingest`, formData);
-      setMessage(res.data.message);
-    } catch (err) {
-      setMessage("Lỗi: " + (err.response?.data?.detail || err.message));
-    }
-    setLoading(false);
+  // Hàm ghi log giống logResponse trong file test
+  const logResponse = (data) => {
+    setResponseLog(typeof data === 'object' ? JSON.stringify(data, null, 2) : data);
   };
 
-  // 2. API: Soạn giáo án (Cần col_name và unit_title)
-  const handleGenerateLessonPlan = async () => {
-    if (!collectionName) return alert("Vui lòng nhập tên Collection!");
-
-    const formData = new FormData();
-    formData.append('col_name', collectionName);
-    formData.append('unit_title', unitTitle);
-
-    setLoading(true);
-    try {
-      const res = await axios.post(`${API_BASE_URL}/api/generate-lesson-plan`, formData);
-      setMessage(res.data.message);
-    } catch (err) {
-      setMessage("Lỗi: " + (err.response?.data?.detail || err.message));
+  // 1. API Upload & Ingest
+  const uploadAndIngest = async () => {
+    if (!file || !colName) {
+      alert("Vui lòng chọn file PDF và nhập tên Collection!");
+      return;
     }
-    setLoading(false);
+
+    logResponse("Đang gửi file lên server...");
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("col_name", colName);
+
+    try {
+      const response = await axios.post(`${BASE_URL}/api/upload-and-ingest`, formData);
+      logResponse(response.data);
+    } catch (error) {
+      logResponse("Lỗi kết nối: " + error.message);
+    }
   };
 
-  // 3. API: Tạo Slide (Cần col_name)
-  const handleGenerateSlides = async () => {
-    if (!collectionName) return alert("Vui lòng nhập tên Collection!");
-
-    const formData = new FormData();
-    formData.append('col_name', collectionName);
-
-    setLoading(true);
-    try {
-      const res = await axios.post(`${API_BASE_URL}/api/generate-slides`, formData);
-      setMessage(res.data.message);
-    } catch (err) {
-      setMessage("Lỗi: " + (err.response?.data?.detail || err.message));
+  // 2. API Database Preview
+  const previewDatabase = () => {
+    if (!colName) {
+      alert("Vui lòng nhập tên Collection!");
+      return;
     }
-    setLoading(false);
+    const url = `${BASE_URL}/api/database-preview?col_name=${colName}`;
+    window.open(url, '_blank');
+  };
+
+  // 3. API Generate Lesson Plan[cite: 4]
+  const generateLessonPlan = async () => {
+    if (!colName) {
+      alert("Vui lòng nhập tên Collection!");
+      return;
+    }
+
+    logResponse("Đang ra lệnh cho CrewAI soạn giáo án ngầm...");
+    const formData = new FormData();
+    formData.append("col_name", colName);
+    formData.append("unit_title", unitTitle);
+
+    try {
+      const response = await axios.post(`${BASE_URL}/api/generate-lesson-plan`, formData);
+      logResponse(response.data);
+    } catch (error) {
+      logResponse("Lỗi kết nối: " + error.message);
+    }
+  };
+
+  // 4. API Generate Slides[cite: 4]
+  const generateSlides = async () => {
+    if (!colName) {
+      alert("Vui lòng nhập tên Collection!");
+      return;
+    }
+
+    logResponse("Đang ra lệnh thiết kế Slide ngầm...");
+    const formData = new FormData();
+    formData.append("col_name", colName);
+
+    try {
+      const response = await axios.post(`${BASE_URL}/api/generate-slides`, formData);
+      logResponse(response.data);
+    } catch (error) {
+      logResponse("Lỗi kết nối: " + error.message);
+    }
   };
 
   return (
-    <div className="container" style={containerStyle}>
-      <h1 style={{ color: '#2c3e50' }}>EdTech AI Master Dashboard</h1>
-      <p style={{ color: '#7f8c8d' }}>Hệ thống hỗ trợ soạn bài và thiết kế bài giảng AI</p>
-      <hr />
+    <div style={containerStyle}>
+      <h1 style={{ textAlign: 'center' }}>🚀 Giao diện EdTech AI Master</h1>
 
-      {/* Bước 1: Cấu hình Collection */}
-      <section style={sectionStyle}>
-        <h3>Bước 1: Cấu hình Tài liệu</h3>
-        <div style={inputGroup}>
-          <label>Tên Collection (Ví dụ: Toan_Lop_10):</label>
-          <input 
-            type="text" 
-            value={collectionName} 
-            onChange={(e) => setCollectionName(e.target.value)} 
-            placeholder="Nhập tên không dấu, không khoảng cách..."
-            style={inputStyle}
-          />
-        </div>
-      </section>
+      {/* Terminal / Kết quả trả về[cite: 4] */}
+      <div style={cardStyle}>
+        <h2 style={h2Style}>💻 Terminal / Kết quả trả về</h2>
+        <div style={logStyle}>{responseLog}</div>
+      </div>
 
-      {/* Bước 2: Upload File */}
-      <section style={sectionStyle}>
-        <h3>Bước 2: Tải lên & Ingest</h3>
-        <input type="file" accept=".pdf" onChange={(e) => setFile(e.target.files[0])} style={{marginBottom: '10px'}} />
-        <br />
-        <button onClick={handleUploadAndIngest} disabled={loading} style={btnGreen}>
-          Bắt đầu Phân tích (Ingest)
-        </button>
-      </section>
+      {/* 1. Upload Section[cite: 4] */}
+      <div style={cardStyle}>
+        <h2 style={h2Style}>1. Upload PDF & Đẩy lên Zilliz (/api/upload-and-ingest)</h2>
+        <input 
+          type="file" 
+          accept=".pdf" 
+          onChange={(e) => setFile(e.target.files[0])} 
+          style={inputStyle} 
+        />
+        <input 
+          type="text" 
+          placeholder="Nhập tên Collection (VD: Global_Success_Book_1)" 
+          value={colName}
+          onChange={(e) => setColName(e.target.value)}
+          style={inputStyle} 
+        />
+        <button onClick={uploadAndIngest} style={btnPrimary}>📤 Upload & Ingest</button>
+      </div>
 
-      {/* Bước 3: Công cụ AI */}
-      <section style={sectionStyle}>
-        <h3>Bước 3: Công cụ AI Master</h3>
-        <div style={inputGroup}>
-          <label>Tiêu đề bài học (Unit Title):</label>
-          <input 
-            type="text" 
-            value={unitTitle} 
-            onChange={(e) => setUnitTitle(e.target.value)} 
-            style={inputStyle}
-          />
-        </div>
-        <div style={{ display: 'flex', gap: '10px' }}>
-          <button onClick={handleGenerateLessonPlan} disabled={loading} style={btnOrange}>Soạn Giáo Án (CrewAI)</button>
-          <button onClick={handleGenerateSlides} disabled={loading} style={btnPurple}>Thiết kế Slide PPTX</button>
-          <button 
-            onClick={() => window.open(`${API_BASE_URL}/api/database-preview?col_name=${collectionName}`, '_blank')}
-            style={btnBlue}
-          >
-            Xem Database Preview
-          </button>
-        </div>
-      </section>
+      {/* 2. Database Preview[cite: 4] */}
+      <div style={cardStyle}>
+        <h2 style={h2Style}>2. Xem dữ liệu Zilliz Database (/api/database-preview)</h2>
+        <button onClick={previewDatabase} style={btnGet}>👁️ Mở tab xem Database</button>
+      </div>
 
-      {/* Hiển thị thông báo */}
-      {loading && <div style={{ color: '#2980b9', fontWeight: 'bold' }}>Hệ thống đang xử lý...</div>}
-      {message && (
-        <div style={messageBox}>
-          <strong>Kết quả:</strong> {message}
-        </div>
-      )}
+      {/* 3. Lesson Plan Section[cite: 4] */}
+      <div style={cardStyle}>
+        <h2 style={h2Style}>3. Soạn Giáo Án CrewAI (/api/generate-lesson-plan)</h2>
+        <input 
+          type="text" 
+          placeholder="Tên Unit (VD: UNIT 1: LEISURE TIME)" 
+          value={unitTitle}
+          onChange={(e) => setUnitTitle(e.target.value)}
+          style={inputStyle} 
+        />
+        <button onClick={generateLessonPlan} style={btnPrimary}>📝 Bắt đầu soạn giáo án</button>
+      </div>
+
+      {/* 4. Generate Slides Section[cite: 4] */}
+      <div style={cardStyle}>
+        <h2 style={h2Style}>4. Tạo Slide PowerPoint (/api/generate-slides)</h2>
+        <button onClick={generateSlides} style={btnPrimary}>📊 Tạo file PPTX</button>
+      </div>
     </div>
   );
 }
 
-// --- Styles (Inline CSS để bạn chạy được ngay) ---
-const containerStyle = { maxWidth: '900px', margin: '40px auto', padding: '20px', backgroundColor: '#f9f9f9', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' };
-const sectionStyle = { backgroundColor: '#fff', padding: '20px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #eee' };
-const inputGroup = { marginBottom: '15px', display: 'flex', flexDirection: 'column', gap: '5px' };
-const inputStyle = { padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '16px' };
-const messageBox = { marginTop: '20px', padding: '15px', backgroundColor: '#e8f6ef', borderLeft: '5px solid #2ecc71', borderRadius: '4px' };
+// --- CSS-in-JS bám sát style cũ ---
+const containerStyle = { fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#f4f7f6', maxWidth: '800px', margin: 'auto' };
+const cardStyle = { background: 'white', padding: '20px', marginBottom: '20px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' };
+const h2Style = { marginTop: 0, color: '#333', fontSize: '18px', borderBottom: '2px solid #eee', paddingBottom: '10px' };
+const inputStyle = { width: '100%', padding: '8px', margin: '10px 0', border: '1px solid #ccc', borderRadius: '4px', boxSizing: 'border-box' };
+const btnPrimary = { background: '#007bff', color: 'white', border: 'none', padding: '10px 15px', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' };
+const btnGet = { ...btnPrimary, background: '#28a745' };
 
-// Buttons
-const baseBtn = { padding: '12px 20px', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', fontWeight: 'bold' };
-const btnGreen = { ...baseBtn, backgroundColor: '#27ae60' };
-const btnBlue = { ...baseBtn, backgroundColor: '#2980b9' };
-const btnOrange = { ...baseBtn, backgroundColor: '#e67e22' };
-const btnPurple = { ...baseBtn, backgroundColor: '#8e44ad' };
-
+// DÒNG ĐÃ SỬA LỖI whiteSpace Ở ĐÂY:
+const logStyle = { 
+    background: '#333', 
+    color: '#0f0', 
+    padding: '15px', 
+    borderRadius: '4px', 
+    fontFamily: 'monospace', 
+    whiteSpace: 'pre-wrap', 
+    minHeight: '100px', 
+    maxHeight: '300px', 
+    overflowY: 'auto' 
+};
 export default App;
