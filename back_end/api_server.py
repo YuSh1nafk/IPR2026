@@ -2,6 +2,7 @@ import os
 from fastapi import FastAPI, BackgroundTasks, UploadFile, File, HTTPException, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles # THÊM DÒNG NÀY
 import shutil
 from pymilvus import connections, utility
 from zilliz_database.multimodal_ingest import main as run_ingest
@@ -21,6 +22,8 @@ app.add_middleware(
 )
 
 os.makedirs("file", exist_ok=True)
+os.makedirs("outputs", exist_ok=True) # THÊM DÒNG NÀY ĐỂ TỰ TẠO THƯ MỤC OUTPUTS
+app.mount("/static", StaticFiles(directory="outputs"), name="static")
 
 MILVUS_URI = os.getenv("ZILLIZ_URI", "http://localhost:19530")
 MILVUS_TOKEN = os.getenv("ZILLIZ_TOKEN", "")
@@ -138,6 +141,28 @@ async def api_generate_slides(
         "download_link": output_ppt
     }
 
+# ==========================================
+# 5. API LẤY DANH SÁCH COLLECTION HIỆN CÓ
+# ==========================================
+@app.get("/api/list-collections")
+async def api_list_collections():
+    try:
+        connections.connect(alias="default", uri=MILVUS_URI, token=MILVUS_TOKEN)
+        cols = utility.list_collections(using="default")
+        connections.disconnect(alias="default")
+        return {"collections": cols}
+    except Exception as e:
+        return {"collections": [], "error": str(e)}
+
+        # ==========================================
+# 6. API KIỂM TRA TRẠNG THÁI FILE ĐÃ TẠO XONG CHƯA
+# ==========================================
+@app.get("/api/check-file")
+async def api_check_file(filename: str):
+    file_path = os.path.join("outputs", filename)
+    if os.path.exists(file_path):
+        return {"status": "ready"}
+    return {"status": "processing"}
 
 if __name__ == "__main__":
     import uvicorn
