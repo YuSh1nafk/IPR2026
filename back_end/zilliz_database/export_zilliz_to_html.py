@@ -24,8 +24,6 @@ def export_milvus_to_html(col_name:str ,output_filename="database_dump_test_1.ht
     col.load()
 
     print(f"2. Đang truy vấn toàn bộ dữ liệu từ collection '{col_name}'...")
-    # Lấy tối đa 10.000 dòng (nếu sách dài hơn, bạn có thể tăng limit)
-    # Dùng expr="seq_id >= 0" để lấy tất cả các record có seq_id
     results = col.query(
         expr="seq_id >= 0",
         output_fields=["seq_id", "data_type", "content"],
@@ -71,10 +69,8 @@ def export_milvus_to_html(col_name:str ,output_filename="database_dump_test_1.ht
         html_content += f'  <span class="seq-id">[ID: {seq_id}] - {data_type.upper()}</span>\n'
 
         if data_type == "text":
-            # Nếu là text, in thẳng chữ ra
             html_content += f'  <div class="text-content">{content}</div>\n'
         elif data_type == "image":
-            # Nếu là ảnh, ghép chuỗi Base64 vào thẻ img của HTML
             html_content += f'  <img class="image-content" src="data:image/jpeg;base64,{content}" alt="Image seq {seq_id}">\n'
 
         html_content += f'</div>\n'

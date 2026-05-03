@@ -165,40 +165,37 @@ def gemini_embed_image(image_bytes: bytes) -> List[float]:
 
 
 def setup_milvus(col_name: str) -> Collection:
-    # connections.connect(alias="default", uri=MILVUS_URI, token=MILVUS_TOKEN)
-    #
-    # if utility.has_collection(COL_NAME):
-    #     utility.drop_collection(COL_NAME)
-    #     print(f"Đã xóa collection cũ '{COL_NAME}'.")
-    #
-    # fields = [
-    #     FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
-    #     FieldSchema(name="seq_id", dtype=DataType.INT64),  # Thứ tự từ trên xuống dưới
-    #     FieldSchema(name="data_type", dtype=DataType.VARCHAR, max_length=10),  # "text" hoặc "image"
-    #     FieldSchema(name="content", dtype=DataType.VARCHAR, max_length=65535),  # Chữ hoặc Base64 ảnh
-    #     FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=EMBED_DIM),
-    # ]
-    # col = Collection(name=COL_NAME, schema=CollectionSchema(fields))
-    # col.create_index(field_name="vector",
-    #                  index_params={"index_type": "IVF_FLAT", "metric_type": "COSINE", "params": {"nlist": 128}})
-    # return col
+    # 1. Tạo một alias (tên kết nối) ĐỘC NHẤT cho luồng này để không tranh chấp với luồng khác
+    unique_alias = f"conn_{col_name}"
 
-    connections.connect(alias="default", uri=MILVUS_URI, token=MILVUS_TOKEN)
+    print(f"Đang tạo kết nối tới Zilliz (Alias: {unique_alias})...")
 
-    if utility.has_collection(col_name):
-        utility.drop_collection(col_name)
+    # 2. Kết nối bằng alias độc nhất
+    connections.connect(alias=unique_alias, uri=MILVUS_URI, token=MILVUS_TOKEN)
+
+    # 3. Thao tác với Zilliz bằng alias độc nhất này
+    if utility.has_collection(col_name, using=unique_alias):
+        utility.drop_collection(col_name, using=unique_alias)
         print(f"Đã xóa collection cũ '{col_name}'.")
 
     fields = [
-         FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
-         FieldSchema(name="seq_id", dtype=DataType.INT64),  # Thứ tự từ trên xuống dưới
-         FieldSchema(name="data_type", dtype=DataType.VARCHAR, max_length=10),  # "text" hoặc "image"
-         FieldSchema(name="content", dtype=DataType.VARCHAR, max_length=65535),  # Chữ hoặc Base64 ảnh
+        FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
+        FieldSchema(name="seq_id", dtype=DataType.INT64),
+        FieldSchema(name="data_type", dtype=DataType.VARCHAR, max_length=10),
+        FieldSchema(name="content", dtype=DataType.VARCHAR, max_length=65535),
         FieldSchema(name="vector", dtype=DataType.FLOAT_VECTOR, dim=EMBED_DIM),
-     ]
-    col = Collection(name=col_name, schema=CollectionSchema(fields))
-    col.create_index(field_name="vector",
-                      index_params={"index_type": "IVF_FLAT", "metric_type": "COSINE", "params": {"nlist": 128}})
+    ]
+
+    # 4. Truyền using=unique_alias vào khởi tạo Collection
+    col = Collection(name=col_name, schema=CollectionSchema(fields), using=unique_alias)
+
+    # 5. Truyền using=unique_alias vào hàm tạo Index
+    col.create_index(
+        field_name="vector",
+        index_params={"index_type": "IVF_FLAT", "metric_type": "COSINE", "params": {"nlist": 128}},
+        using=unique_alias
+    )
+
     return col
 
 # ================== Luồng chạy chính ==================
@@ -276,6 +273,8 @@ def main(pdf_path: str, col_name: str):
             time.sleep(30)
 
     print("\nHOÀN TẤT DỰ ÁN INGEST! Dữ liệu của bạn giờ đã có cả TEXT và ẢNH nhỏ chuẩn xác.")
+    unique_alias = f"conn_{col_name}"
+    connections.disconnect(alias=unique_alias)
 
 
 if __name__ == "__main__":
