@@ -1,0 +1,75 @@
+This project utilizes a Monorepo architecture, consisting of two independent parts: the back_end (Python/FastAPI/CrewAI) and the front_end (React/Vite). You must run both parts simultaneously for the system to function correctly.
+
+PREREQUISITES
+Python installed (version 3.11 for smoothest experience).
+Node.js installed.
+Active accounts and API Keys for Gemini API, GPT API and Zilliz Cloud (Milvus).
+
+PART 1: BACKEND SETUP
+
+- Step 1: Open Terminal 1 and navigate to the backend directory
+cd back_end
+
+- Step 2: Create a virtual environment (Optional but highly recommended)
+python -m venv .venv
+# Activate the virtual environment:
+# - On Windows:
+.venv\Scripts\activate
+# - On Mac/Linux:
+source .venv/bin/activate
+
+- Step 3: Install the required Python dependencies
+pip install -r requirement.txt
+
+- Step 4: Configure Environment Variables (CRUCIAL)
+Create a new file named .env directly inside the back_end folder.
+Open the .env file and insert your API credentials using the following format:
+GEMINI_API_KEY=your_gemini_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here
+ZILLIZ_URI=your_zilliz_cluster_uri_here
+ZILLIZ_TOKEN=your_zilliz_token_here
+
+PART 2: FRONTEND SETUP
+
+- Step 1: Open Terminal 2 (keep Terminal 1 running) and navigate to the frontend directory
+cd front_end
+
+- Step 2: Install Node.js dependencies
+npm install
+
+PART 3: HOW TO START AND RUN THE PROJECT
+
+Open 2 separate terminal in your IDEA
+- In Terminal 1 (Currently in the back_end directory):
+Start the API server by running:
+python api_server.py
+(If you see Application startup complete and port 8000 in the logs, the backend is successfully running).
+
+- In Terminal 2 (Currently in the front_end directory):
+Start the Web UI by running:
+npm run dev
+(The terminal will display a local link, typically http://localhost:5173. Hold Ctrl + Click on that link to open it in your browser).
+
+PART 4: USER INTERFACE WORKFLOW
+
+- Step 1: Upload Book to Zilliz:
+Enter a collection name for the book without spaces like Global_Success_10_Book.
+Select the corresponding textbook PDF file in local storage.
+Click "Upload" and wait for the system to notify you of a successful Ingest, you can track the ingest process through backend Terminal
+
+- Step 2: Export Collection to HTML:
+Once the ingest complete, step 2 will show all the Collection you have in Zilliz Database
+Select any Collection you want, wait about 30 seconds, double click to open the HTML file 
+
+- Step 3: Generate Lesson Plan
+Once ingestion is complete, click the "Generate Lesson Plan" button with corresponding Collection.
+The CrewAI system will begin analyzing and drafting the plan. When finished, the HTML lesson plan will be displayed on your screen for your review.
+
+- Step 4: Export PowerPoint Slide
+Carefully review the generated lesson plan content. If everything looks good, click "Export to Slide".
+The system will process the JSON data and generate a .pptx file. Click the "Download" button to save the presentation to your computer.
+
+Note: 
+- The Zilliz Free Tier limits storage to a maximum of 5 Collections (5 books). If you encounter a 503 Limit error or a Database Full warning, log into your Zilliz admin dashboard and drop/delete older collections before proceeding.
+- AI API free tier might have some random issue, you can use paid tier for best experience.
+- The "file" folder located at back_end in this project do not have any effect, you can freely delete it but if the error occur you must fix it yourself (if you not OCD let it there).

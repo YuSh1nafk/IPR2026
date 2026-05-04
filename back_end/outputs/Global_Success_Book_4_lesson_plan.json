@@ -3,75 +3,80 @@
         "unit_name": "Unit 1 - Leisure Time",
         "lesson_name": "Getting Started",
         "objectives": [
-            "Introduce and practice vocabulary related to hobbies and leisure activities.",
+            "Understand and use vocabulary related to leisure activities, such as DIY, knitting kit, leisure time, hang out, cinema, comedy.",
+            "Practice the present continuous and simple present tenses in the context of talking about hobbies and leisure activities.",
             "Develop listening and reading comprehension skills through dialogues.",
-            "Practice using present continuous tense and question forms.",
-            "Encourage students to express preferences and make invitations."
+            "Engage in pair and group activities to practice speaking and writing skills."
         ],
         "materials": [
+            "Audio recording of the dialogue",
             "Textbook",
-            "Audio player",
-            "Pictures for activity matching",
-            "Whiteboard and markers"
+            "Whiteboard and markers",
+            "Printed copies of the dialogue for students",
+            "Pictures for activity matching"
         ],
         "stages": [
             {
                 "name": "Warm-up",
                 "time": "5 minutes",
-                "aim": "To engage students and introduce the topic of leisure activities.",
-                "target_language": "Leisure activities, hobbies",
-                "content": "Discussion about students' hobbies and leisure activities.",
+                "aim": "To introduce the topic of leisure activities and engage students' interest.",
+                "target_language": "Leisure activities",
+                "content": "Teacher greets students and asks them about their favorite leisure activities.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Greet students and ask them about their hobbies. 'What do you like to do in your free time?' Write some of their answers on the board."
+                        "action": "Ask students: 'What do you like to do in your free time?' and write their responses on the board."
                     },
                     {
                         "role": "Students",
-                        "action": "Respond to the teacher's questions about their hobbies."
+                        "action": "Respond to the teacher's question with their favorite leisure activities."
                     }
                 ]
             },
             {
                 "name": "Stage 1: Listen and Read",
                 "time": "10 minutes",
-                "aim": "To practice listening and reading comprehension.",
-                "target_language": "DIY, Knitting kit, Leisure time, Hang out, Cinema, Comedy",
-                "content": "Listening to and reading the conversation between Tom and Trang.",
+                "aim": "To introduce the dialogue and practice listening and reading skills.",
+                "target_language": "I’m keen on doing DIY, knitting kit, leisure time, hang out, cinema, comedy.",
+                "content": "Students listen to the dialogue between Tom and Trang and follow along in their textbooks.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Play the audio of the conversation. Ask students to listen and follow along in their textbooks."
+                        "action": "Play the audio recording of the dialogue."
                     },
                     {
                         "role": "Students",
-                        "action": "Listen to the audio and read along in their textbooks."
+                        "action": "Listen to the recording and follow the text in their books."
+                    },
+                    {
+                        "role": "Teacher",
+                        "action": "Ask students to read the dialogue aloud in pairs."
                     }
                 ]
             },
             {
                 "name": "Stage 2: Complete the Sentences",
                 "time": "10 minutes",
-                "aim": "To check comprehension of the dialogue.",
-                "target_language": "Knitting kit, Leisure time, Friends, Cinema, Comedy",
-                "content": "Complete sentences based on the conversation.",
+                "aim": "To check comprehension of the dialogue and practice sentence completion.",
+                "target_language": "knitting kit, leisure time, free time, together, Sunday",
+                "content": "Students complete sentences based on the dialogue.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Instruct students to read the conversation again and complete the sentences in their textbooks."
+                        "action": "Instruct students to complete the sentences on page 8."
                     },
                     {
                         "role": "Students",
-                        "action": "Read the conversation and fill in the blanks in the sentences provided."
+                        "action": "Complete the sentences: 1. Trang is looking for a _________. 2. She likes doing DIY in her _________. 3. Tom loves spending his free time with _________. 4. Tom and his friends usually _________ together. 5. Tom, Mark, Trang, and Mai are going to see a comedy this _________."
                     }
                 ]
             },
             {
-                "name": "Stage 3: Activity Matching",
+                "name": "Stage 3: Match Activities with Pictures",
                 "time": "10 minutes",
-                "aim": "To associate vocabulary with images.",
-                "target_language": "DIY, Puzzles, Surfing the net, Cooking, Playing sport, Messaging friends",
-                "content": "Matching activities with images.",
+                "aim": "To practice vocabulary related to leisure activities by matching words to pictures.",
+                "target_language": "doing DIY, doing puzzles, surfing the net, cooking, playing sport, messaging friends",
+                "content": "Students match activities from the box with pictures.",
                 "activities": [
                     {
                         "role": "",
@@ -79,266 +84,62 @@
                     },
                     {
                         "role": "Teacher",
-                        "action": "Show the images and ask students to match the activities from the box to the correct pictures."
+                        "action": "Display the images on the board and ask students to match the activities from the box with the pictures."
                     },
                     {
                         "role": "Students",
-                        "action": "Work in pairs to discuss and match the activities with the pictures."
+                        "action": "Work in pairs to write the activities under the correct pictures."
                     }
                 ]
             },
             {
                 "name": "Stage 4: Guess the Activities",
                 "time": "10 minutes",
-                "aim": "To infer activities from descriptive phrases.",
-                "target_language": "Improve memory, Save money, Improve physical health, Keep in touch, Learn IT",
-                "content": "Guessing activities based on descriptions.",
+                "aim": "To practice understanding descriptions and matching them to activities.",
+                "target_language": "improve memory, save money, improve physical health, keep in touch, learn something about IT",
+                "content": "Students read phrases and guess which activities are described.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Read the descriptive phrases and ask students to guess which activities they describe."
+                        "action": "Read the phrases aloud and ask students to guess the activities."
                     },
                     {
                         "role": "Students",
-                        "action": "Work in pairs to discuss and guess the activities described by the phrases."
+                        "action": "Work in pairs to match the phrases with the activities from Stage 3."
                     }
                 ]
             },
             {
                 "name": "Stage 5: Group Discussion",
-                "time": "10 minutes",
-                "aim": "To practice speaking and expressing future plans.",
-                "target_language": "Free time activities, Future plans",
-                "content": "Discussing weekend plans and reporting to the class.",
+                "time": "15 minutes",
+                "aim": "To practice speaking by discussing weekend plans and reporting to the class.",
+                "target_language": "If you have some free time this weekend, what will you do?",
+                "content": "Students discuss their weekend plans in groups and report back to the class.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Ask students to discuss in groups what they will do if they have free time this weekend."
+                        "action": "Ask students to discuss the question: 'If you have some free time this weekend, what will you do?' in groups."
                     },
                     {
                         "role": "Students",
-                        "action": "Discuss in groups and prepare to report their answers to the class."
+                        "action": "Discuss in groups and then report their answers to the class."
                     }
                 ]
             },
             {
                 "name": "Wrap-up",
                 "time": "5 minutes",
-                "aim": "To review and consolidate the lesson's content.",
-                "target_language": "Review of key vocabulary and phrases",
-                "content": "Summarizing the lesson and addressing any questions.",
+                "aim": "To review the lesson and consolidate learning.",
+                "target_language": "Leisure activities vocabulary",
+                "content": "Teacher reviews key vocabulary and grammar points from the lesson.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Review the key vocabulary and phrases learned in the lesson. Answer any remaining questions from students."
+                        "action": "Review the key vocabulary and grammar points from the lesson."
                     },
                     {
                         "role": "Students",
-                        "action": "Ask any questions they have and listen to the summary."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "unit_name": "Unit 3: My Hobbies",
-        "lesson_name": "A Closer Look 1",
-        "objectives": [
-            "Understand and use expressions about likes and dislikes",
-            "Practice pronunciation of /ʊ/ and /u:/ sounds",
-            "Complete sentences using appropriate vocabulary"
-        ],
-        "materials": [
-            "Textbook",
-            "Audio CD for pronunciation",
-            "Whiteboard and markers"
-        ],
-        "stages": [
-            {
-                "name": "Warm-up",
-                "time": "5 minutes",
-                "aim": "To introduce the topic of hobbies and likes/dislikes",
-                "target_language": "Hobbies, likes, dislikes",
-                "content": "Engage students in a brief discussion about their hobbies and what they like or dislike doing.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Greet the students and ask them to share one hobby they enjoy."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Respond to the teacher's question with their favorite hobby."
-                    }
-                ]
-            },
-            {
-                "name": "Vocabulary Introduction",
-                "time": "10 minutes",
-                "aim": "To introduce vocabulary related to likes and dislikes",
-                "target_language": "be fond of, be keen on, be interested in, be crazy about, be into",
-                "content": "Introduce expressions about likes and dislikes using the textbook vocabulary.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Introduce the vocabulary words: be fond of, be keen on, be interested in, be crazy about, be into."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Explain how to express dislikes by adding 'not' after the verb 'be'."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Provide examples: 'She is keen on cooking.' → 'She is not keen on cooking.'"
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Listen and take notes on the new vocabulary and grammar explanation."
-                    }
-                ]
-            },
-            {
-                "name": "Task 1: Matching Exercise",
-                "time": "10 minutes",
-                "aim": "To practice matching expressions about likes",
-                "target_language": "be fond of, be keen on, be interested in, be crazy about, be into",
-                "content": "Match a word/phrase in column A with a word in column B to make expressions about likes.",
-                "activities": [
-                    {
-                        "role": "Reference",
-                        "action": "[IMAGE_TAG_39]"
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Display the matching exercise on the board."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Work in pairs to match the words in column A with the correct words in column B."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Check answers as a class and provide feedback."
-                    }
-                ]
-            },
-            {
-                "name": "Task 2: Fill in the Blanks",
-                "time": "10 minutes",
-                "aim": "To practice using vocabulary in context",
-                "target_language": "into, fond, keen, interested, about",
-                "content": "Fill in each blank with a correct word from the box.",
-                "activities": [
-                    {
-                        "role": "Reference",
-                        "action": "[IMAGE_TAG_42]"
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Explain the task and read the sentences aloud."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Individually fill in the blanks with the appropriate words."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Review the answers with the class and correct any mistakes."
-                    }
-                ]
-            },
-            {
-                "name": "Task 3: Sentence Completion",
-                "time": "10 minutes",
-                "aim": "To personalize language use by completing sentences about personal likes/dislikes",
-                "target_language": "cooking, doing DIY, surfing the net, playing sport, doing puzzles, messaging friends",
-                "content": "Complete the sentences about what you like or dislike doing.",
-                "activities": [
-                    {
-                        "role": "Reference",
-                        "action": "[IMAGE_TAG_46]"
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Explain the task and provide examples."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Complete the sentences with words from the box or their own ideas."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Ask some students to share their sentences with the class."
-                    }
-                ]
-            },
-            {
-                "name": "Pronunciation Practice",
-                "time": "10 minutes",
-                "aim": "To practice pronunciation of /ʊ/ and /u:/ sounds",
-                "target_language": "cook, school, group, would, push, woman, June, move",
-                "content": "Listen and repeat the words. Pay attention to the sounds /ʊ/ and /u:/ and categorize them.",
-                "activities": [
-                    {
-                        "role": "Reference",
-                        "action": "[IMAGE_TAG_50]"
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Play the audio for pronunciation practice."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Listen and repeat the words after the audio."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Write the words in the correct column (/ʊ/ or /u:/) in their notebooks."
-                    }
-                ]
-            },
-            {
-                "name": "Sentence Practice",
-                "time": "10 minutes",
-                "aim": "To practice pronunciation in context",
-                "target_language": "/ʊ/ and /u:/ sounds in sentences",
-                "content": "Listen and practice the sentences. Underline /ʊ/ and circle /u:/ words.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Play the audio of the sentences."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Listen to the sentences and practice repeating them."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Underline the words with /ʊ/ and circle the words with /u:/ in their textbooks."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Review the sentences and ensure students have identified the sounds correctly."
-                    }
-                ]
-            },
-            {
-                "name": "Wrap-up",
-                "time": "5 minutes",
-                "aim": "To review the lesson and reinforce learning",
-                "target_language": "be fond of, be keen on, be interested in, be crazy about, be into",
-                "content": "Review key vocabulary and pronunciation from the lesson.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Ask students to share one new thing they learned today."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Share their learning with the class."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Summarize the lesson and assign any homework if necessary."
+                        "action": "Participate in the review by answering questions."
                     }
                 ]
             }
@@ -346,112 +147,256 @@
     },
     {
         "unit_name": "Unit 1 - Leisure Time",
-        "lesson_name": "A CLOSER LOOK 2",
+        "lesson_name": "A Closer Look 1",
         "objectives": [
-            "Understand and use verbs of liking/disliking followed by gerunds and to-infinitives.",
-            "Correctly categorize verbs based on their grammatical usage.",
-            "Complete sentences using the correct form of verbs of liking/disliking.",
-            "Express personal preferences using verbs of liking/disliking.",
-            "Engage in a group activity to practice using verbs of liking/disliking in questions."
+            "Understand and use expressions related to likes and dislikes such as 'be fond of', 'be keen on', 'be interested in', 'be crazy about', 'be into'.",
+            "Practice using negation in expressions of likes and dislikes by adding 'not' after the verb 'be'.",
+            "Improve pronunciation skills by distinguishing between the sounds /ʊ/ and /u:/."
         ],
         "materials": [
+            "Audio recording for pronunciation practice",
             "Textbook",
-            "Whiteboard",
-            "Markers",
-            "Projector",
-            "Printed handouts of images [IMAGE_TAG_57], [IMAGE_TAG_58], [IMAGE_TAG_65], [IMAGE_TAG_68]"
+            "Whiteboard and markers",
+            "Printed vocabulary matching exercise",
+            "Printed fill-in-the-blank sentences"
         ],
         "stages": [
             {
                 "name": "Warm-up",
                 "time": "5 minutes",
-                "aim": "To introduce the topic of liking and disliking.",
-                "target_language": "Verbs of liking and disliking",
-                "content": "Introduction to verbs of liking and disliking.",
+                "aim": "To introduce the topic of likes and dislikes and engage students' interest.",
+                "target_language": "Likes and dislikes expressions",
+                "content": "Teacher greets students and asks them about their favorite hobbies and interests.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Greet the students and introduce the topic of the lesson: verbs of liking and disliking."
+                        "action": "Ask students: 'What are some activities you like or dislike?' and write their responses on the board."
                     },
                     {
-                        "role": "Teacher",
-                        "action": "Ask students to share activities they like or dislike doing in their free time."
+                        "role": "Students",
+                        "action": "Respond to the teacher's question with activities they like or dislike."
                     }
                 ]
             },
             {
-                "name": "Stage 1: Grammar Introduction",
+                "name": "Stage 1: Vocabulary Matching",
                 "time": "10 minutes",
-                "aim": "To introduce the grammar rules for verbs of liking/disliking + gerunds and to-infinitives.",
-                "target_language": "Verbs of liking/disliking + gerunds; Verbs of liking/disliking + to-infinitives",
-                "content": "Explanation of how some verbs of liking and disliking are followed by gerunds or to-infinitives.",
+                "aim": "To match words and phrases to form expressions about likes.",
+                "target_language": "be fond of, be keen on, be interested in, be crazy about, be into",
+                "content": "Students match words from column A with column B to make expressions about likes.",
                 "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Explain that some verbs of liking/disliking are followed by gerunds only, while others can be followed by both gerunds and to-infinitives."
-                    },
                     {
                         "role": "",
-                        "action": "[IMAGE_TAG_57]"
+                        "action": "[IMAGE_TAG_39]"
                     },
                     {
                         "role": "Teacher",
-                        "action": "Provide examples: 'They dislike surfing the net.' and 'I love going/to go to the cinema.'"
+                        "action": "Explain the task and demonstrate one example. Then ask students to complete the matching exercise."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Work individually to match the words and phrases in column A with those in column B."
                     }
                 ]
             },
             {
-                "name": "Stage 2: Categorizing Verbs",
+                "name": "Stage 2: Negation of Likes and Dislikes",
                 "time": "10 minutes",
-                "aim": "To categorize verbs into those followed by gerunds only and those followed by both gerunds and to-infinitives.",
-                "target_language": "love, dislike, like, enjoy, detest, hate, fancy, prefer",
-                "content": "Categorization of verbs based on their grammatical usage.",
+                "aim": "To practice changing positive expressions about likes into negative ones.",
+                "target_language": "Add 'not' after 'be' to express dislikes",
+                "content": "Students learn how to express dislikes by adding 'not' after the verb 'be'.",
+                "activities": [
+                    {
+                        "role": "",
+                        "action": "[IMAGE_TAG_40]"
+                    },
+                    {
+                        "role": "Teacher",
+                        "action": "Explain how to change expressions of likes to dislikes by adding 'not' after 'be'. Provide examples."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Practice changing given sentences from positive to negative."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 3: Fill in the Blanks",
+                "time": "10 minutes",
+                "aim": "To practice using vocabulary in context by filling in blanks with correct words.",
+                "target_language": "fond, interested, keen, into, about",
+                "content": "Students fill in the blanks with the correct words from the box.",
+                "activities": [
+                    {
+                        "role": "",
+                        "action": "[IMAGE_TAG_42]"
+                    },
+                    {
+                        "role": "Teacher",
+                        "action": "Instruct students to fill in the blanks with the correct words."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Complete the sentences: 1. I'm ________ of taking photos. 2. Mai is ________ in history. 3. My sister is ________ on cooking. 4. My brother spends lots of time surfing the net, but I'm not ________ it. 5. I'm not crazy ________ doing DIY."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 4: Sentence Completion",
+                "time": "10 minutes",
+                "aim": "To express personal likes and dislikes using given vocabulary.",
+                "target_language": "crazy about, keen on, fond of, not interested in, not into",
+                "content": "Students complete sentences about their own likes and dislikes.",
+                "activities": [
+                    {
+                        "role": "",
+                        "action": "[IMAGE_TAG_46]"
+                    },
+                    {
+                        "role": "Teacher",
+                        "action": "Ask students to complete the sentences with words from the box or their own ideas."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Write sentences: 1. I'm crazy about ________. 2. I'm keen on ________. 3. I'm fond of ________. 4. I'm not interested in ________. 5. I'm not into ________."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 5: Pronunciation Practice",
+                "time": "10 minutes",
+                "aim": "To practice pronunciation of /ʊ/ and /u:/ sounds.",
+                "target_language": "Words with /ʊ/ and /u:/ sounds",
+                "content": "Students listen and repeat words, focusing on the sounds /ʊ/ and /u:/.",
+                "activities": [
+                    {
+                        "role": "",
+                        "action": "[IMAGE_TAG_50]"
+                    },
+                    {
+                        "role": "Teacher",
+                        "action": "Play the audio recording and ask students to repeat the words."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Listen and repeat: cook, school, group, would, push, woman, June, move. Then categorize the words into /ʊ/ and /u:/ columns."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 6: Sentence Pronunciation Practice",
+                "time": "10 minutes",
+                "aim": "To practice pronunciation in context by identifying /ʊ/ and /u:/ sounds in sentences.",
+                "target_language": "Underline /ʊ/ words, circle /u:/ words",
+                "content": "Students listen to sentences and identify the sounds /ʊ/ and /u:/ in context.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Display the image with the list of verbs and columns for categorization."
+                        "action": "Play the audio of sentences and instruct students to underline /ʊ/ words and circle /u:/ words."
                     },
+                    {
+                        "role": "Students",
+                        "action": "Listen and practice: 1. She likes reading books and swimming in the pool. 2. When it is cool, we like to play football. 3. She drew and made puddings in her free time. 4. My mum loves pumpkin soup and coffee with a little sugar. 5. My brother is fond of watching the cartoon about a clever wolf."
+                    }
+                ]
+            },
+            {
+                "name": "Wrap-up",
+                "time": "5 minutes",
+                "aim": "To review the lesson and consolidate learning.",
+                "target_language": "Expressions of likes and dislikes, /ʊ/ and /u:/ sounds",
+                "content": "Teacher reviews key points and addresses any questions.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Summarize the lesson's key vocabulary and pronunciation points."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Participate in the review by asking questions or sharing what they learned."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "unit_name": "Unit 1 - Leisure Time",
+        "lesson_name": "A Closer Look 2",
+        "objectives": [
+            "Understand and use verbs of liking and disliking followed by gerunds and to-infinitives.",
+            "Practice distinguishing between verbs that can only be followed by gerunds and those that can be followed by both gerunds and to-infinitives.",
+            "Improve sentence completion skills using verbs of liking and disliking.",
+            "Engage in interactive activities to reinforce the use of likes and dislikes vocabulary."
+        ],
+        "materials": [
+            "Textbook",
+            "Whiteboard and markers",
+            "Printed verb lists for categorization",
+            "Audio recording for pronunciation practice",
+            "Printed fill-in-the-blank sentences"
+        ],
+        "stages": [
+            {
+                "name": "Warm-up",
+                "time": "5 minutes",
+                "aim": "To introduce the topic of verbs of liking and disliking and engage students' interest.",
+                "target_language": "Verbs of liking and disliking",
+                "content": "Teacher greets students and asks them about activities they like or dislike doing.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Ask students: 'What activities do you love or hate doing?' and write their responses on the board."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Respond to the teacher's question with activities they love or hate."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 1: Verb Categorization",
+                "time": "10 minutes",
+                "aim": "To categorize verbs based on whether they are followed by gerunds only or both gerunds and to-infinitives.",
+                "target_language": "love, dislike, like, enjoy, detest, hate, fancy, prefer",
+                "content": "Students categorize verbs into two columns based on their usage with gerunds and to-infinitives.",
+                "activities": [
                     {
                         "role": "",
                         "action": "[IMAGE_TAG_58]"
                     },
                     {
-                        "role": "Students",
-                        "action": "Work in pairs to categorize the verbs into the appropriate columns."
+                        "role": "Teacher",
+                        "action": "Explain the difference between verbs followed by gerunds only and those followed by both gerunds and to-infinitives. Provide examples."
                     },
                     {
-                        "role": "Teacher",
-                        "action": "Review the answers with the class."
+                        "role": "Students",
+                        "action": "Work in pairs to categorize the verbs into the correct columns."
                     }
                 ]
             },
             {
-                "name": "Stage 3: Multiple Choice Exercise",
+                "name": "Stage 2: Multiple Choice Exercise",
                 "time": "10 minutes",
-                "aim": "To practice using the correct form of verbs in sentences.",
+                "aim": "To practice choosing the correct form of verbs in sentences.",
                 "target_language": "travelling, doing, to watch, going, hunting",
-                "content": "Multiple choice questions to choose the correct verb form.",
+                "content": "Students choose the correct verb form in given sentences.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Instruct students to choose the correct answer (A, B, or C) for each sentence."
+                        "action": "Explain the task and read the sentences aloud."
                     },
                     {
                         "role": "Students",
-                        "action": "Complete the exercise individually."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Review the correct answers with the class."
+                        "action": "Individually choose the correct answer A, B, or C for each sentence: 1. I love ________, so in my leisure time, I go to some villages near Ha Noi to relax and enjoy the outdoors. 2. Tom enjoys ________ puzzles, especially Sudoku. 3. When do you like ________ TV? 4. Do you fancy ________ to the cinema this weekend? 5. I detest ________. I think it's cruel to harm animals."
                     }
                 ]
             },
             {
-                "name": "Stage 4: Sentence Completion with Pictures",
+                "name": "Stage 3: Sentence Completion with Pictures",
                 "time": "10 minutes",
-                "aim": "To complete sentences using the correct form of verbs of liking/disliking.",
+                "aim": "To complete sentences using verbs in brackets based on pictures.",
                 "target_language": "like, enjoy, dislike, hate, prefer",
-                "content": "Complete sentences using verbs in brackets.",
+                "content": "Students complete sentences with the correct form of the verb in brackets.",
                 "activities": [
                     {
                         "role": "",
@@ -459,24 +404,20 @@
                     },
                     {
                         "role": "Teacher",
-                        "action": "Display the image and instruct students to complete the sentences using the verbs in brackets."
+                        "action": "Show the pictures and instruct students to complete the sentences using the verbs in brackets."
                     },
                     {
                         "role": "Students",
-                        "action": "Work individually to complete the sentences."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Check the answers as a class."
+                        "action": "Write the sentences: 1. Mark __________ (like) 2. The girls __________ (enjoy) 3. My cousin __________ (dislike) 4. My father __________ (hate) 5. Tom and his sister __________ (prefer)"
                     }
                 ]
             },
             {
-                "name": "Stage 5: Personal Sentences",
+                "name": "Stage 4: Personal Sentence Completion",
                 "time": "10 minutes",
-                "aim": "To express personal preferences using verbs of liking/disliking.",
-                "target_language": "like, prefer, love, dislike, hate, detest",
-                "content": "Students complete sentences about themselves.",
+                "aim": "To express personal likes and dislikes using the target vocabulary.",
+                "target_language": "I like, I prefer, I love, I dislike, I hate, I detest",
+                "content": "Students complete sentences about their own preferences.",
                 "activities": [
                     {
                         "role": "",
@@ -484,419 +425,348 @@
                     },
                     {
                         "role": "Teacher",
-                        "action": "Ask students to complete the sentences about themselves using the verbs provided."
+                        "action": "Ask students to complete the sentences about themselves."
                     },
                     {
                         "role": "Students",
-                        "action": "Write their sentences individually."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Invite a few students to share their sentences with the class."
+                        "action": "Write sentences: I like ______. I prefer ______. I love ______. I dislike ______. I hate ______. I detest ______."
                     }
                 ]
             },
             {
-                "name": "Stage 6: Game - Likes and Dislikes Mimes",
+                "name": "Stage 5: Game - Likes and Dislikes Mimes",
                 "time": "15 minutes",
-                "aim": "To practice using verbs of liking/disliking in questions through a mime game.",
-                "target_language": "Verbs of liking/disliking",
-                "content": "Group activity where students mime activities and guess using questions.",
+                "aim": "To practice asking and answering questions about likes and dislikes through a mime game.",
+                "target_language": "Do you like, Do you love, Yes, I do, No, I don't",
+                "content": "Students play a mime game to guess leisure activities based on yes/no questions.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Explain the rules of the mime game: one student mimes an activity they like or dislike, others guess by asking Yes/No questions."
+                        "action": "Explain the rules of the mime game and provide an example."
                     },
                     {
                         "role": "Students",
-                        "action": "Participate in the game, taking turns to mime and guess."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Provide feedback and correct any mistakes in the use of verbs."
+                        "action": "Work in groups. One student mimes a leisure activity they like or dislike. The others guess by asking yes/no questions using the verbs they have learned. Example: A: Do you like surfing the net? B: No, I don't. C: Do you love messaging your friends? B: Yes, I do."
                     }
                 ]
             },
             {
                 "name": "Wrap-up",
                 "time": "5 minutes",
-                "aim": "To review and consolidate the lesson's content.",
-                "target_language": "Verbs of liking/disliking",
-                "content": "Summary of the lesson and key points.",
+                "aim": "To review the lesson and consolidate learning.",
+                "target_language": "Verbs of liking and disliking, gerunds, to-infinitives",
+                "content": "Teacher reviews key points and addresses any questions.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Summarize the main points of the lesson: verbs of liking/disliking and their grammatical forms."
+                        "action": "Summarize the lesson's key grammar points and vocabulary."
                     },
                     {
-                        "role": "Teacher",
-                        "action": "Ask students if they have any questions about the lesson."
+                        "role": "Students",
+                        "action": "Participate in the review by asking questions or sharing what they learned."
                     }
                 ]
             }
         ]
     },
     {
-        "unit_name": "Teens' Leisure Activities",
-        "lesson_name": "COMMUNICATION",
+        "unit_name": "Unit 1 - Leisure Time",
+        "lesson_name": "Communication",
         "objectives": [
-            "Understand and use language for inviting and accepting invitations.",
-            "Identify and discuss various leisure activities from around the world.",
-            "Practice speaking skills through pair and group activities."
+            "Understand and use phrases for inviting and accepting invitations.",
+            "Practice speaking skills through role-play and pair work.",
+            "Identify leisure activities from pictures and descriptions.",
+            "Discuss and report on personal preferences regarding leisure activities."
         ],
         "materials": [
-            "Audio recording for dialogues",
+            "Audio recording of dialogues",
             "Textbook",
-            "Whiteboard",
-            "Markers"
+            "Whiteboard and markers",
+            "Printed dialogue scripts",
+            "Printed table for information completion"
         ],
         "stages": [
             {
                 "name": "Warm-up",
                 "time": "5 minutes",
-                "aim": "To introduce the topic of leisure activities and invitations.",
-                "target_language": "Leisure activities, inviting, accepting",
-                "content": "Introduction to the lesson topic: leisure activities and how to invite someone.",
+                "aim": "To introduce the topic of inviting and accepting invitations and engage students' interest.",
+                "target_language": "Inviting and accepting invitations",
+                "content": "Teacher greets students and asks them about recent invitations they have received or given.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Greet the class and introduce the topic of leisure activities and invitations."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Ask students about their favorite leisure activities."
+                        "action": "Ask students: 'Have you invited anyone to do something recently? How did you invite them?' and write key phrases on the board."
                     },
                     {
                         "role": "Students",
-                        "action": "Respond to the teacher's questions about their favorite leisure activities."
+                        "action": "Respond to the teacher's question with examples of invitations they have given or received."
                     }
                 ]
             },
             {
-                "name": "Stage 1: Listen and Read",
+                "name": "Stage 1: Listen and Read Dialogues",
                 "time": "10 minutes",
-                "aim": "To familiarize students with inviting and accepting invitations through dialogues.",
-                "target_language": "Would you like to...?; Do you fancy...?; I’d love to.; That’s great.",
-                "content": "Students listen to and read dialogues focusing on inviting and accepting invitations.",
+                "aim": "To listen and understand dialogues that include invitations and responses.",
+                "target_language": "Would you like to..., I’d love to, Do you fancy..., That’s great",
+                "content": "Students listen to and read the dialogues, focusing on the highlighted invitation and acceptance phrases.",
                 "activities": [
                     {
-                        "role": "Teacher",
-                        "action": "Play the audio recording of the dialogues."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Listen to the dialogues and follow along in their textbooks."
-                    },
-                    {
-                        "role": "Reference",
+                        "role": "",
                         "action": "[IMAGE_TAG_75]"
                     },
                     {
                         "role": "Teacher",
-                        "action": "Highlight the expressions used for inviting and accepting invitations on the board."
-                    }
-                ]
-            },
-            {
-                "name": "Stage 2: Pair Practice",
-                "time": "15 minutes",
-                "aim": "To practice inviting and accepting invitations using given situations.",
-                "target_language": "Would you like to...?; Do you fancy...?; I’d love to.; That’s great.",
-                "content": "Students practice inviting and accepting invitations in pairs using specific scenarios.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Explain the task and provide example dialogues."
+                        "action": "Play the audio recording of the dialogues and ask students to follow along in their textbooks."
                     },
                     {
                         "role": "Students",
-                        "action": "Work in pairs to practice inviting and accepting invitations in the provided situations: playing badminton, making paper flowers, trying home-made pizza."
+                        "action": "Listen to the dialogues and pay attention to the highlighted parts."
                     },
                     {
                         "role": "Teacher",
-                        "action": "Monitor pairs and provide feedback."
+                        "action": "Ask students to read the dialogues aloud in pairs, focusing on pronunciation and intonation."
                     }
                 ]
             },
             {
-                "name": "Stage 3: Picture Activity",
+                "name": "Stage 2: Practise Inviting and Accepting",
                 "time": "10 minutes",
-                "aim": "To identify leisure activities from pictures.",
-                "target_language": "Leisure activities",
-                "content": "Students work in pairs to identify activities in pictures.",
+                "aim": "To practice inviting and accepting invitations using the target language.",
+                "target_language": "Would you like to..., I’d love to, Do you fancy..., That’s great",
+                "content": "Students practice inviting and accepting invitations in given situations.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Show the image with pictures of leisure activities."
+                        "action": "Explain the task and provide examples of how to invite and accept invitations."
                     },
                     {
-                        "role": "Reference",
+                        "role": "Students",
+                        "action": "Work in pairs to practice the dialogues in the given situations: - Invite your friend to play badminton. - Invite your friend to make paper flowers with you. - Invite your friend to try your home-made pizza."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 3: Identify Activities in Pictures",
+                "time": "10 minutes",
+                "aim": "To identify leisure activities from pictures and discuss them.",
+                "target_language": "Leisure activities",
+                "content": "Students identify activities in pictures and discuss them with a partner.",
+                "activities": [
+                    {
+                        "role": "",
                         "action": "[IMAGE_TAG_80]"
                     },
                     {
-                        "role": "Students",
-                        "action": "Discuss in pairs what the activity in each picture is."
+                        "role": "Teacher",
+                        "action": "Show the pictures and ask students to discuss what activity is depicted in each picture."
                     },
                     {
-                        "role": "Teacher",
-                        "action": "Elicit answers from the class and write them on the board."
+                        "role": "Students",
+                        "action": "Work in pairs to answer the question: 'What is the activity in each picture?' and share their answers with the class."
                     }
                 ]
             },
             {
-                "name": "Stage 4: Reading and Completing Table",
+                "name": "Stage 4: Complete the Table",
                 "time": "15 minutes",
-                "aim": "To read about teenagers' leisure activities and complete a table with information.",
-                "target_language": "Origami, Snowboarding, Badminton, Relax, Improve, Muscle strength, Reduce stress",
-                "content": "Students read about leisure activities and complete a table with details.",
+                "aim": "To read descriptions of leisure activities and complete a table with information.",
+                "target_language": "Origami, Snowboarding, Playing sport, Relax, Health, Strength",
+                "content": "Students read descriptions and fill in a table with information about leisure activities.",
                 "activities": [
                     {
-                        "role": "Teacher",
-                        "action": "Ask students to read the text about Sakura, Eric, and Lan's leisure activities."
-                    },
-                    {
-                        "role": "Reference",
+                        "role": "",
                         "action": "[IMAGE_TAG_83]"
                     },
                     {
-                        "role": "Students",
-                        "action": "Complete the table with information from the text."
-                    },
-                    {
-                        "role": "Reference",
+                        "role": "",
                         "action": "[IMAGE_TAG_84]"
                     },
                     {
                         "role": "Teacher",
-                        "action": "Check answers as a class."
+                        "action": "Ask students to read the text about the three teenagers and complete the table with the information provided."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Fill in the table with details about each teenager's leisure activity, the country they are from, who they do the activity with, and the benefits of the activity."
                     }
                 ]
             },
             {
                 "name": "Stage 5: Group Discussion",
                 "time": "15 minutes",
-                "aim": "To discuss and express opinions on leisure activities.",
-                "target_language": "Leisure activities, Expressing preferences",
-                "content": "Students discuss which leisure activity they would like to try and why.",
+                "aim": "To discuss personal preferences for leisure activities and report to the class.",
+                "target_language": "Which activity do you want to try?, Why do you want to try it?",
+                "content": "Students discuss in groups which activity they would like to try and why, then report their answers to the class.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Form groups and ask students to discuss which activity they want to try and why."
+                        "action": "Explain the discussion task and encourage students to think about their own preferences."
                     },
                     {
                         "role": "Students",
-                        "action": "Discuss in groups and prepare to report their answers."
+                        "action": "Work in groups to discuss the questions: 'Which of the activities in 4 do you want to try?' and 'Why do you want to try it?' Then prepare to report their group's answers to the class."
                     },
                     {
-                        "role": "Teacher",
-                        "action": "Ask each group to report their answers to the class."
+                        "role": "Students",
+                        "action": "Report their group's answers to the class, explaining their reasons for choosing the activities."
                     }
                 ]
             },
             {
                 "name": "Wrap-up",
                 "time": "5 minutes",
-                "aim": "To review the lesson and conclude the class.",
-                "target_language": "Review of key expressions and vocabulary",
-                "content": "Review the key points of the lesson and conclude the class.",
+                "aim": "To review the lesson and consolidate learning.",
+                "target_language": "Inviting and accepting invitations, leisure activities",
+                "content": "Teacher reviews key phrases and vocabulary from the lesson and addresses any questions.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Summarize the key expressions and vocabulary learned in the lesson."
+                        "action": "Summarize the lesson's key points and ask students if they have any questions."
                     },
                     {
                         "role": "Students",
-                        "action": "Ask any remaining questions."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Provide homework related to inviting and leisure activities."
+                        "action": "Participate in the review by asking questions or sharing what they learned."
                     }
                 ]
             }
         ]
     },
     {
-        "unit_name": "Unit 5: Leisure Activities",
+        "unit_name": "Unit 1 - Leisure Time",
         "lesson_name": "Skills 1",
         "objectives": [
-            "Identify and discuss various leisure activities.",
-            "Improve reading comprehension through answering questions about a text.",
-            "Practice speaking skills by discussing personal leisure activities."
+            "Develop reading comprehension skills by identifying key information in a text about leisure activities.",
+            "Enhance speaking skills through group discussions and reporting.",
+            "Practice using the present simple tense to describe habitual actions.",
+            "Improve question formation using 'What,' 'Who,' and 'Which'."
         ],
         "materials": [
             "Textbook",
             "Whiteboard and markers",
-            "Projector",
-            "Printed copies of the reading text",
-            "Audio recording device"
+            "Printed copies of the text about Trang's leisure activities",
+            "Printed question sheets for group discussions"
         ],
         "stages": [
             {
                 "name": "Warm-up",
                 "time": "5 minutes",
-                "aim": "To engage students and introduce the topic of leisure activities.",
+                "aim": "To introduce the topic of leisure activities and engage students' interest.",
                 "target_language": "Leisure activities",
-                "content": "Discuss common leisure activities.",
+                "content": "Teacher greets students and asks them about their favorite leisure activities.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Greet the students and ask them about their weekend activities."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Introduce the topic of leisure activities."
+                        "action": "Ask students: 'What are your favorite leisure activities?' and write their responses on the board."
                     },
                     {
                         "role": "Students",
-                        "action": "Share their weekend activities briefly."
+                        "action": "Respond to the teacher's question with their favorite leisure activities."
                     }
                 ]
             },
             {
                 "name": "Stage 1: Picture Discussion",
+                "time": "5 minutes",
+                "aim": "To identify and discuss leisure activities depicted in pictures.",
+                "target_language": "Leisure activities",
+                "content": "Students look at pictures and discuss the activities they see.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Show pictures of various leisure activities and ask students to identify them."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Discuss in pairs: 'What activities can you see in the pictures?' and share their answers with the class."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 2: Reading Comprehension - Multiple Choice",
                 "time": "10 minutes",
-                "aim": "To activate prior knowledge and vocabulary related to leisure activities.",
-                "target_language": "Activities",
-                "content": "Look at the pictures. What activities can you see?",
+                "aim": "To read about Trang's leisure activities and choose the correct answers to comprehension questions.",
+                "target_language": "Connect, recipes, family members",
+                "content": "Students read a text about Trang's leisure activities and answer multiple-choice questions.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Display pictures of various leisure activities."
+                        "action": "Distribute the text about Trang's leisure activities and explain the multiple-choice questions."
                     },
                     {
                         "role": "Students",
-                        "action": "Discuss in pairs what activities they see in the pictures."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Elicit responses from students and write key vocabulary on the board."
+                        "action": "Read the text and choose the correct answer for each question: 1. The text is about Trang's leisure activities ______. A. in the past B. with her friends C. with her family 2. The word 'connect' is closest in meaning to ______. A. join with something B. better understand someone C. speak to someone by phone."
                     }
                 ]
             },
             {
-                "name": "Stage 2: Reading Comprehension",
+                "name": "Stage 3: Reading Comprehension - Answering Questions",
                 "time": "15 minutes",
-                "aim": "To develop reading skills and understand the text about Trang's leisure activities.",
-                "target_language": "Leisure activities, connect",
-                "content": "Read about Trang's leisure activities. Choose the correct answer.",
+                "aim": "To read the text again and answer detailed comprehension questions.",
+                "target_language": "Present simple tense, question formation",
+                "content": "Students read the text again and answer specific questions about Trang's leisure activities.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Distribute copies of the reading text about Trang's leisure activities."
+                        "action": "Ask students to read the text again and answer the following questions."
                     },
                     {
                         "role": "Students",
-                        "action": "Read the text silently."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Ask students to choose the correct answer for the questions provided in the textbook."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Select answers: A. in the past, B. with her friends, C. with her family."
+                        "action": "Write answers to the questions: 1. What does Trang do with her family members at the weekend? 2. Who looks for recipes when Trang and her brother cook? 3. Which leisure activity does she love the most? 4. What does Trang's mum teach her to do? 5. What did she win?"
                     }
                 ]
             },
             {
-                "name": "Stage 3: Vocabulary Meaning",
-                "time": "10 minutes",
-                "aim": "To understand the meaning of vocabulary in context.",
-                "target_language": "Connect",
-                "content": "The word 'connect' is closest in meaning to ______.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Discuss the word 'connect' and its meanings."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Choose the correct meaning: A. join with something, B. better understand someone, C. speak to someone by phone."
-                    }
-                ]
-            },
-            {
-                "name": "Stage 4: Detailed Reading",
+                "name": "Stage 4: Group Discussion and Recording",
                 "time": "15 minutes",
-                "aim": "To practice detailed reading and answer comprehension questions.",
-                "target_language": "Family members, recipes",
-                "content": "Read the text again and answer the questions.",
+                "aim": "To practice speaking skills by discussing personal leisure activities and recording peers' answers.",
+                "target_language": "Leisure activities, feelings",
+                "content": "Students work in groups to discuss leisure activities and record their peers' answers.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Ask students to read the text again."
+                        "action": "Provide question sheets and explain the group discussion task."
                     },
                     {
                         "role": "Students",
-                        "action": "Answer the detailed questions about the text."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Review answers with the class."
-                    }
-                ]
-            },
-            {
-                "name": "Stage 5: Group Discussion",
-                "time": "15 minutes",
-                "aim": "To practice speaking skills and discuss personal experiences.",
-                "target_language": "Leisure activities, present simple tense",
-                "content": "Work in groups. Take turns to ask and answer the questions.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Organize students into small groups."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Discuss the given questions in their groups."
+                        "action": "Discuss in groups: 1. What leisure activities do you usually do with your family? 2. Which one do you like the most? Why? 3. How do you feel when you spend time with your family members? Record your friends' answers in the table."
                     },
                     {
                         "role": "",
                         "action": "[IMAGE_TAG_110]"
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Record their friends' answers in the table."
                     }
                 ]
             },
             {
-                "name": "Stage 6: Reporting",
+                "name": "Stage 5: Reporting Group Findings",
                 "time": "10 minutes",
-                "aim": "To practice public speaking and summarize group discussions.",
-                "target_language": "Activities, common",
-                "content": "Report your group members' answers to the class. What activities are the most common?",
+                "aim": "To report on group discussions and identify common leisure activities.",
+                "target_language": "Report, common activities",
+                "content": "Students report their group's findings to the class and discuss common leisure activities.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Ask each group to report their findings."
+                        "action": "Ask each group to report their findings to the class."
                     },
                     {
                         "role": "Students",
-                        "action": "Present their group's answers to the class."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Facilitate a class discussion on common activities."
+                        "action": "Present their group's answers and discuss which activities are the most common among their peers."
                     }
                 ]
             },
             {
                 "name": "Wrap-up",
                 "time": "5 minutes",
-                "aim": "To consolidate learning and wrap up the lesson.",
-                "target_language": "Leisure activities",
-                "content": "Summarize the lesson's key points.",
+                "aim": "To review the lesson and consolidate learning.",
+                "target_language": "Leisure activities, present simple tense",
+                "content": "Teacher reviews key points and addresses any questions.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Summarize the lesson and highlight key vocabulary and grammar points."
+                        "action": "Summarize the lesson's key vocabulary and grammar points."
                     },
                     {
                         "role": "Students",
-                        "action": "Reflect on what they have learned."
+                        "action": "Participate in the review by asking questions or sharing what they learned."
                     }
                 ]
             }
@@ -906,298 +776,143 @@
         "unit_name": "Unit 1 - Leisure Time",
         "lesson_name": "Skills 2",
         "objectives": [
-            "To develop students' listening skills through comprehension questions.",
-            "To enhance students' speaking skills by discussing leisure activities.",
-            "To improve students' writing skills by composing an email about free time activities."
+            "Develop listening comprehension skills by identifying key information from an audio interview about leisure activities.",
+            "Enhance speaking skills through pair discussions about personal leisure activities.",
+            "Practice writing skills by composing an email about leisure activities with friends.",
+            "Improve question formation using 'What,' 'Why,' and 'When'."
         ],
         "materials": [
-            "Audio recording of an interview with Mark",
-            "Worksheet with fill-in-the-blank table",
+            "Audio recording of the interview with Mark",
+            "Textbook",
             "Whiteboard and markers",
-            "Audio player",
-            "Paper and pens for writing"
+            "Printed copies of the table for listening activity",
+            "Printed question sheets for pair discussions"
         ],
         "stages": [
             {
                 "name": "Warm-up",
                 "time": "5 minutes",
-                "aim": "To introduce the topic of leisure activities and activate prior knowledge.",
-                "target_language": "Leisure time, activities, free time, friends",
-                "content": "Discussing leisure activities with friends.",
+                "aim": "To introduce the topic of leisure activities and engage students' interest.",
+                "target_language": "Leisure time, free time, activities",
+                "content": "Teacher greets students and asks them about their typical leisure activities with friends.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Greet the students and ask them about their weekend activities."
+                        "action": "Ask students: 'What activities do you usually do with your friends in your leisure time?' and write their responses on the board."
                     },
                     {
                         "role": "Students",
-                        "action": "Share their weekend activities with the class."
+                        "action": "Respond to the teacher's question with activities they do with friends."
                     }
                 ]
             },
             {
-                "name": "Stage 1: Answer the Questions",
+                "name": "Stage 1: Pre-listening Discussion",
+                "time": "5 minutes",
+                "aim": "To activate prior knowledge and set the context for listening.",
+                "target_language": "Leisure activities, spending time with friends",
+                "content": "Students discuss in pairs the questions about leisure activities with friends.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Ask students to discuss in pairs: 1. In your opinion, what activities can we do with our friends in our leisure time? 2. Why should we spend time with our friends?"
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Discuss the questions in pairs and share their ideas with the class."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 2: Listening Comprehension - Multiple Choice",
                 "time": "10 minutes",
-                "aim": "To encourage students to think about leisure activities and their importance.",
-                "target_language": "Activities, spend time, friends",
-                "content": "1. In your opinion, what activities can we do with our friends in our leisure time? 2. Why should we spend time with our friends?",
+                "aim": "To listen to an interview and choose the correct answers to comprehension questions.",
+                "target_language": "Free time, family and friends",
+                "content": "Students listen to an interview with Mark and choose the correct answers.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Write the questions on the board and ask students to discuss in pairs."
+                        "action": "Play the audio recording of the interview with Mark."
                     },
                     {
                         "role": "Students",
-                        "action": "Discuss the questions in pairs and share their thoughts with the class."
+                        "action": "Listen to the interview and choose the correct answer for each question: 1. When does Mark usually have free time? A. At weekends. B. On Sundays. C. On Saturdays. 2. Who does he spend his free time with? A. His neighbours and friends. B. His family and relatives. C. His family and friends."
                     }
                 ]
             },
             {
-                "name": "Stage 2: Listening Comprehension",
-                "time": "15 minutes",
-                "aim": "To practice listening for specific information.",
-                "target_language": "Free time, weekends, family, friends",
-                "content": "Listen to an interview with Mark about his leisure activities. Choose the correct answer.",
+                "name": "Stage 3: Listening Comprehension - Fill in the Blanks",
+                "time": "10 minutes",
+                "aim": "To listen to the interview again and fill in the blanks with key information.",
+                "target_language": "Cooking, watching, going, fun, stay, see",
+                "content": "Students listen to the interview again and complete the table with no more than two words.",
                 "activities": [
                     {
-                        "role": "Teacher",
-                        "action": "Play the audio recording of Mark's interview."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Listen to the interview and choose the correct answers from the options given."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Check the answers with the class."
-                    }
-                ]
-            },
-            {
-                "name": "Stage 3: Listening for Details",
-                "time": "15 minutes",
-                "aim": "To enhance listening skills by filling in missing information.",
-                "target_language": "Cooking, movie, park, exercise, places",
-                "content": "Listen to the interview again. Fill in each blank in the table with no more than TWO words.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Play the audio recording again and provide students with the worksheet."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Fill in the blanks in the table while listening."
-                    },
-                    {
-                        "role": "Reference",
+                        "role": "",
                         "action": "[IMAGE_TAG_128]"
                     },
                     {
                         "role": "Teacher",
-                        "action": "Review the answers with the class."
+                        "action": "Play the audio recording again and instruct students to fill in the blanks in the table."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Listen and fill in the blanks: Activities - Cooking and watching a (1) ________, Going to the (3) ________ to play volleyball or skateboard, Going for a (5) ________. Reasons - Fun and better than going to the (2) ________, Stay in (4) ________, See different (6) ________."
                     }
                 ]
             },
             {
-                "name": "Stage 4: Speaking Practice",
+                "name": "Stage 4: Pair Discussion",
                 "time": "10 minutes",
-                "aim": "To develop speaking skills through pair work.",
+                "aim": "To practice speaking skills by discussing personal leisure activities with a partner.",
                 "target_language": "Free time, activities, reasons",
-                "content": "Work in pairs. Ask and answer the questions: 1. When do you usually have free time? 2. What do you usually do with your friends in your free time? 3. Why do you do these activities?",
+                "content": "Students work in pairs to ask and answer questions about their own leisure activities.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Instruct students to work in pairs and discuss the questions."
+                        "action": "Provide question sheets and explain the pair discussion task."
                     },
                     {
                         "role": "Students",
-                        "action": "Engage in a dialogue with their partner, asking and answering the questions."
+                        "action": "Discuss in pairs: 1. When do you usually have free time? 2. What do you usually do with your friends in your free time? 3. Why do you do these activities?"
                     }
                 ]
             },
             {
                 "name": "Stage 5: Writing an Email",
-                "time": "20 minutes",
+                "time": "15 minutes",
                 "aim": "To practice writing skills by composing an email about leisure activities.",
-                "target_language": "Email, penfriend, free time, activities",
-                "content": "Write an email (80 - 100 words) to a penfriend to tell him/her about what you usually do with your friends in your free time. Use your answers in task 4.",
+                "target_language": "Email structure, greeting, body, closing",
+                "content": "Students write an email to a penfriend about their leisure activities using their answers from the previous stage.",
                 "activities": [
                     {
-                        "role": "Teacher",
-                        "action": "Explain the email structure and provide the starting and ending format."
-                    },
-                    {
-                        "role": "Reference",
+                        "role": "",
                         "action": "[IMAGE_TAG_135]"
                     },
                     {
-                        "role": "Students",
-                        "action": "Write their email individually, using the provided format."
+                        "role": "Teacher",
+                        "action": "Explain the structure of an email and provide the starting and ending prompts."
                     },
                     {
-                        "role": "Teacher",
-                        "action": "Collect and review the emails, providing feedback."
+                        "role": "Students",
+                        "action": "Write an email (80-100 words) to a penfriend using the provided prompts: From: To: Subject: My free time Hi ________, It's nice to hear from you again. Let me tell you about ______________. Bye for now,"
                     }
                 ]
             },
             {
                 "name": "Wrap-up",
                 "time": "5 minutes",
-                "aim": "To review the lesson's content and consolidate learning.",
-                "target_language": "Leisure time, activities, email",
-                "content": "Summarize the lesson and discuss what students learned.",
+                "aim": "To review the lesson and consolidate learning.",
+                "target_language": "Leisure activities, email writing",
+                "content": "Teacher reviews key points and addresses any questions.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Ask students to share one new thing they learned today."
+                        "action": "Summarize the lesson's key vocabulary and grammar points."
                     },
                     {
                         "role": "Students",
-                        "action": "Reflect on the lesson and share their thoughts with the class."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "unit_name": "Leisure Activities",
-        "lesson_name": "Looking Back",
-        "objectives": [
-            "Review and practice vocabulary related to leisure activities.",
-            "Practice forming sentences using gerunds to express likes and dislikes.",
-            "Improve sentence construction skills using given cues.",
-            "Enhance understanding of verb forms in different contexts."
-        ],
-        "materials": [
-            "Textbook",
-            "Whiteboard and markers",
-            "Projector",
-            "Printed handouts of exercises"
-        ],
-        "stages": [
-            {
-                "name": "Warm-up",
-                "time": "10 minutes",
-                "aim": "To engage students and introduce the topic of leisure activities.",
-                "target_language": "Leisure activities",
-                "content": "Teacher will introduce the topic by asking students about their favorite leisure activities.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Greet students and ask, 'What do you like to do in your free time?'."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Respond with their favorite leisure activities."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Write students' responses on the board and introduce the lesson's focus on leisure activities."
-                    }
-                ]
-            },
-            {
-                "name": "Stage 1: Complete the sentences with appropriate leisure activities",
-                "time": "15 minutes",
-                "aim": "To practice using vocabulary related to leisure activities in context.",
-                "target_language": "Online, Puzzles, Crafts, Messaging, Sports, Internet",
-                "content": "Students complete sentences using appropriate leisure activities.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Explain the task and read each sentence aloud."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Fill in the blanks with appropriate leisure activities."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Check answers as a class and provide feedback."
-                    }
-                ]
-            },
-            {
-                "name": "Stage 2: Write complete sentences from the given cues",
-                "time": "15 minutes",
-                "aim": "To practice sentence construction using given cues.",
-                "target_language": "Crazy about, Interested in, Not fond of, Not into, Keen on",
-                "content": "Students write complete sentences using the given cues.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Explain the task and provide an example using the first cue."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Work individually to write sentences from the cues."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Ask students to share their sentences and provide feedback."
-                    }
-                ]
-            },
-            {
-                "name": "Stage 3: Fill in each blank with the correct form(s) of the verb in brackets",
-                "time": "15 minutes",
-                "aim": "To practice using gerunds in sentences.",
-                "target_language": "Cycle, Read, Play, Chat, Do",
-                "content": "Students fill in blanks with the correct form of verbs in brackets.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Explain the task and read each sentence aloud."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Complete sentences with the correct verb forms."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Review answers with the class and correct any mistakes."
-                    }
-                ]
-            },
-            {
-                "name": "Stage 4: Complete the passage",
-                "time": "20 minutes",
-                "aim": "To use verb forms in context and improve comprehension.",
-                "target_language": "Ride, Read, Message, Make, Knit, Play",
-                "content": "Students complete a passage using verbs in brackets and an image.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Display the passage and image [IMAGE_TAG_159] on the screen."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Complete the passage using the correct verb forms."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Discuss the completed passage with the class and provide feedback."
-                    }
-                ]
-            },
-            {
-                "name": "Wrap-up",
-                "time": "10 minutes",
-                "aim": "To review the lesson and reinforce learning.",
-                "target_language": "Leisure activities, Gerunds",
-                "content": "Review of key vocabulary and grammar points from the lesson.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Ask students to recall the leisure activities discussed."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Share what they learned about forming sentences with gerunds."
-                    },
-                    {
-                        "role": "Teacher",
-                        "action": "Summarize the lesson and assign any homework if necessary."
+                        "action": "Participate in the review by asking questions or sharing what they learned."
                     }
                 ]
             }
@@ -1205,111 +920,267 @@
     },
     {
         "unit_name": "Unit 1 - Leisure Time",
-        "lesson_name": "Project: Leisure Time Survey",
+        "lesson_name": "Looking Back",
         "objectives": [
-            "Conduct interviews to gather information about leisure activities.",
-            "Practice using verbs of liking/disliking followed by gerunds and/or to-infinitives.",
-            "Report findings using structured questions.",
-            "Enhance pronunciation of sounds /uː/ and /ʌ/."
+            "Review and consolidate vocabulary related to leisure activities.",
+            "Practice forming complete sentences from given cues using appropriate verb forms.",
+            "Enhance understanding of gerunds following verbs of liking and disliking.",
+            "Improve grammar skills by filling in blanks with correct verb forms."
         ],
         "materials": [
             "Textbook",
-            "Notebook",
-            "Pen",
-            "[IMAGE_TAG_172]",
-            "[IMAGE_TAG_180]"
+            "Whiteboard and markers",
+            "Printed copies of sentence cues",
+            "Printed verb form exercises",
+            "Printed passage completion exercise"
         ],
         "stages": [
             {
                 "name": "Warm-up",
+                "time": "5 minutes",
+                "aim": "To introduce the topic of leisure activities and engage students' interest.",
+                "target_language": "Leisure activities",
+                "content": "Teacher greets students and asks them about their favorite leisure activities.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Ask students: 'What are some leisure activities you enjoy?' and write their responses on the board."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Respond to the teacher's question with their favorite leisure activities."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 1: Vocabulary Completion",
                 "time": "10 minutes",
-                "aim": "To introduce the topic of leisure activities and engage students.",
-                "target_language": "Leisure activities, free time, likes and dislikes.",
-                "content": "Discussion about what students like to do in their free time.",
+                "aim": "To complete sentences with appropriate leisure activities.",
+                "target_language": "Online, puzzles, DIY, messaging, fond of, keen on",
+                "content": "Students complete sentences using appropriate leisure activities.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Greet the class and ask students about their favorite leisure activities."
+                        "action": "Explain the task and provide examples of leisure activities."
                     },
                     {
                         "role": "Students",
-                        "action": "Share their favorite leisure activities with the class."
+                        "action": "Complete the sentences: 1. Mai loves __________ online for about 30 minutes a day. She thinks puzzles are good for the brain. 2. My favourite leisure activity is __________. I can make many things myself, such as paper flowers and bracelets. 3. __________ is a popular way for teens to spend their free time. Many of them send messages to each other every day. 4. My brother is fond of __________ with his friends. On Sundays, he usually plays football, goes swimming, or plays badminton with them. 5. Tom spends one hour on the Internet almost every day. He is keen on __________."
                     }
                 ]
             },
             {
-                "name": "Stage 1: Conduct Interviews",
-                "time": "20 minutes",
-                "aim": "To gather information about students' leisure activities.",
-                "target_language": "When do you have free time? What do you like doing with your family/friends?",
-                "content": "Students interview each other using provided questions.",
-                "activities": [
-                    {
-                        "role": "Teacher",
-                        "action": "Explain the task of interviewing classmates and provide the list of questions."
-                    },
-                    {
-                        "role": "Students",
-                        "action": "Work in groups to interview classmates using the questions: 1. When do you have free time? 2. What do you like doing with your family in your free time? 3. What do you like doing with your friends in your free time? 4. What leisure activities do you like doing on your own? 5. What leisure activities would you like to try in the future?"
-                    }
-                ]
-            },
-            {
-                "name": "Stage 2: Collect Answers",
+                "name": "Stage 2: Sentence Construction",
                 "time": "15 minutes",
-                "aim": "To organize the collected data from interviews.",
-                "target_language": "Student, Question 1, Question 2, Question 3, Question 4, Question 5",
-                "content": "Students fill in a table with the interview answers.",
+                "aim": "To write complete sentences from given cues using correct verb forms.",
+                "target_language": "Crazy about, interested, not fond, not into, keen on",
+                "content": "Students construct sentences from provided cues.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Show [IMAGE_TAG_172] and explain how to fill in the table with the collected data."
-                    },
-                    {
-                        "role": "Reference",
-                        "action": "[IMAGE_TAG_172]"
+                        "action": "Provide sentence cues and explain how to form complete sentences."
                     },
                     {
                         "role": "Students",
-                        "action": "Fill in the table with answers from their interviews."
+                        "action": "Write sentences: 1. my cousin / crazy about / play / computer / games. 2. they / interested / play / badminton / after school? 3. I / not fond / make models / because / I / not patient. 4. - why / you / not into / cook? - because / often / burn myself. 5. my friends / keen / do judo / and / they / go / judo club / every Sunday."
                     }
                 ]
             },
             {
-                "name": "Stage 3: Report Findings",
-                "time": "25 minutes",
-                "aim": "To practice reporting skills and use of structured questions.",
-                "target_language": "How many students did you interview? When do the students have free time?",
-                "content": "Students report their findings to the class using guiding questions.",
+                "name": "Stage 3: Grammar Practice - Gerunds",
+                "time": "10 minutes",
+                "aim": "To fill in blanks with the correct form of gerunds following verbs of liking and disliking.",
+                "target_language": "Enjoy cycling, don’t like reading, detests playing, love chatting, prefer doing",
+                "content": "Students fill in blanks with correct gerund forms of verbs.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Provide the guiding questions for reporting: 1. How many students did you interview? 2. When do the students have free time? 3. What are the most popular activities they do with their family? 4. What are the most popular activities they do with their friends? 5. What are the most popular activities they do on their own? 6. What leisure activities would they like to try in the future?"
+                        "action": "Explain the use of gerunds after verbs of liking and disliking."
                     },
                     {
                         "role": "Students",
-                        "action": "Present their findings to the class, using the guiding questions to structure their report."
+                        "action": "Complete the sentences: 1. Does Tom enjoy (cycle) __________ in the park with his friends? 2. Some teenagers don’t like (read) __________ comic books. 3. Mai detests (play) __________ sport because it’s tiring. 4. Trang and Ann love (chat) __________ with each other in their free time. 5. What do Nam and Mark prefer (do) __________ at the weekend?"
+                    }
+                ]
+            },
+            {
+                "name": "Stage 4: Passage Completion",
+                "time": "15 minutes",
+                "aim": "To complete a passage using the correct verb forms and additional words if necessary.",
+                "target_language": "Riding, reading, messaging, making, knitting, playing",
+                "content": "Students complete a passage about Ann using verbs in brackets.",
+                "activities": [
+                    {
+                        "role": "",
+                        "action": "[IMAGE_TAG_159]"
+                    },
+                    {
+                        "role": "Teacher",
+                        "action": "Provide the passage and explain how to use the verbs in brackets to complete it."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Complete the passage: Ann is my best friend. She usually has free time at the weekend. She enjoys (1. ride) riding a horse at the riding club. Sometimes, she likes (2. read) ______ or (3. message) ______. She also loves (4. make) ______ and (5. knit) ______. However, there is one thing she doesn’t like doing in her free time. She dislikes (6. play) ______."
                     }
                 ]
             },
             {
                 "name": "Wrap-up",
-                "time": "10 minutes",
-                "aim": "To review the lesson and reinforce key concepts.",
-                "target_language": "Leisure activities, pronunciation of /uː/ and /ʌ/.",
-                "content": "Review of the lesson and pronunciation practice.",
+                "time": "5 minutes",
+                "aim": "To review the lesson and consolidate learning.",
+                "target_language": "Leisure activities, gerunds, sentence construction",
+                "content": "Teacher reviews key points and addresses any questions.",
                 "activities": [
                     {
                         "role": "Teacher",
-                        "action": "Summarize the lesson and ask students to pronounce words with /uː/ and /ʌ/."
+                        "action": "Summarize the lesson's key vocabulary and grammar points."
                     },
                     {
                         "role": "Students",
-                        "action": "Practice pronunciation of words with /uː/ and /ʌ/ sounds."
+                        "action": "Participate in the review by asking questions or sharing what they learned."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "unit_name": "Unit 1 - Leisure Time",
+        "lesson_name": "Project",
+        "objectives": [
+            "Conduct a survey on leisure activities among classmates.",
+            "Practice question formation and interviewing skills.",
+            "Collect and organize data in a structured format.",
+            "Report findings using structured responses based on collected data.",
+            "Use vocabulary related to leisure activities and expressions of likes and dislikes."
+        ],
+        "materials": [
+            "Textbook",
+            "Whiteboard and markers",
+            "Printed copies of the interview questions",
+            "Printed tables for data collection",
+            "Audio recording for pronunciation practice"
+        ],
+        "stages": [
+            {
+                "name": "Warm-up",
+                "time": "5 minutes",
+                "aim": "To introduce the topic of leisure activities and engage students' interest.",
+                "target_language": "Leisure time, free time, activities",
+                "content": "Teacher greets students and asks them about their typical leisure activities.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Ask students: 'What are your favorite leisure activities to do with family and friends?' and write their responses on the board."
                     },
                     {
-                        "role": "Reference",
-                        "action": "[IMAGE_TAG_180]"
+                        "role": "Students",
+                        "action": "Respond to the teacher's question with their favorite leisure activities."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 1: Interview Preparation",
+                "time": "10 minutes",
+                "aim": "To prepare students for conducting interviews by reviewing key questions and vocabulary.",
+                "target_language": "When, What, would, like doing, would like to try",
+                "content": "Students review the interview questions and practice asking them in pairs.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Distribute printed copies of the interview questions and explain the task."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Practice asking and answering the interview questions in pairs: 1. When do you have free time? 2. What do you like doing with your family in your free time? 3. What do you like doing with your friends in your free time? 4. What leisure activities do you like doing on your own? 5. What leisure activities would you like to try in the future?"
+                    }
+                ]
+            },
+            {
+                "name": "Stage 2: Conducting Interviews",
+                "time": "15 minutes",
+                "aim": "To conduct interviews with classmates and collect data on leisure activities.",
+                "target_language": "Interview, family, friends, activities",
+                "content": "Students conduct interviews with classmates and record their answers in a table.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Instruct students to form groups and conduct interviews with classmates from different groups."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Interview classmates using the prepared questions and record their answers in the provided table."
+                    },
+                    {
+                        "role": "",
+                        "action": "[IMAGE_TAG_172]"
+                    }
+                ]
+            },
+            {
+                "name": "Stage 3: Data Organization",
+                "time": "10 minutes",
+                "aim": "To organize collected data in a structured format for reporting.",
+                "target_language": "Data collection, table, organize",
+                "content": "Students organize their collected data in the provided table format.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Guide students in organizing their collected data into the provided table."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Fill in the table with the collected answers: Student | Question 1 | Question 2 | Question 3 | Question 4 | Question 5."
+                    }
+                ]
+            },
+            {
+                "name": "Stage 4: Reporting Findings",
+                "time": "15 minutes",
+                "aim": "To report the findings of the survey to the class using guiding questions.",
+                "target_language": "Report, popular activities, future activities",
+                "content": "Students report their findings to the class based on guiding questions.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Provide guiding questions for reporting findings and explain the reporting process."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Prepare and present their group's findings to the class, answering the guiding questions: 1. How many students did you interview? 2. When do the students have free time? 3. What are the most popular activities they do with their family? 4. What are the most popular activities they do with their friends? 5. What are the most popular activities they do on their own? 6. What leisure activities would they like to try in the future?"
+                    }
+                ]
+            },
+            {
+                "name": "Stage 5: Pronunciation Practice",
+                "time": "10 minutes",
+                "aim": "To practice correct pronunciation of the sounds /uː/ and /ʊ/ in words and sentences.",
+                "target_language": "/uː/ and /ʊ/ sounds",
+                "content": "Students practice pronouncing words with /uː/ and /ʊ/ sounds.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Play an audio recording of words and sentences containing /uː/ and /ʊ/ sounds and ask students to repeat."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Listen and repeat the words and sentences, focusing on the correct pronunciation of /uː/ and /ʊ/ sounds."
+                    }
+                ]
+            },
+            {
+                "name": "Wrap-up",
+                "time": "5 minutes",
+                "aim": "To review the lesson and consolidate learning.",
+                "target_language": "Leisure activities, expressions of likes and dislikes",
+                "content": "Teacher reviews key points and addresses any questions.",
+                "activities": [
+                    {
+                        "role": "Teacher",
+                        "action": "Summarize the lesson's key vocabulary and grammar points."
+                    },
+                    {
+                        "role": "Students",
+                        "action": "Participate in the review by asking questions or sharing what they learned."
                     }
                 ]
             }
